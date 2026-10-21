@@ -1,6 +1,6 @@
 // Only public metadata from this fixed repository can enable downloads.
-export const REPOSITORY='https://github.com/CrazalothAI/Cassius-Guitar-DAW';
-export const RELEASE_API='https://api.github.com/repos/CrazalothAI/Cassius-Guitar-DAW/releases/latest';
+export const REPOSITORY='https://github.com/CrazalothAI/cassian-website';
+export const RELEASE_API='https://api.github.com/repos/CrazalothAI/cassian-website/releases/latest';
 export const MAX_METADATA_BYTES=128*1024;
 export function validateRelease(data){
   if(!data||data.draft!==false||data.prerelease!==false||!Number.isSafeInteger(data.id)||data.id<1||typeof data.tag_name!=='string'||!/^v\d+\.\d+\.\d+$/.test(data.tag_name)||data.html_url!==`${REPOSITORY}/releases/tag/${data.tag_name}`||!Array.isArray(data.assets)||data.assets.length<7||data.assets.length>16)throw new Error('Release identity is invalid.');
