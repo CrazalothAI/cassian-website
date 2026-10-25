@@ -19,6 +19,10 @@ function clearDownloads() {
   byId('release-title').textContent = 'Cassian 8.0 Public Beta';
   byId('installer-size').textContent = 'Standalone + VST3 · Windows x64';
   byId('hero-release-note').textContent = 'Standalone + VST3 · Checking the official 8.0 installer…';
+  for (const prefix of ['hero', 'download']) {
+    byId(`${prefix}-checksum-badge`).hidden = true;
+    byId(`${prefix}-checksum-short`).textContent = '';
+  }
 }
 
 async function loadRelease() {
@@ -54,11 +58,16 @@ async function loadRelease() {
     heroLink.removeAttribute('aria-disabled');
     byId('release-channel').textContent = 'PUBLIC BETA';
     byId('release-message').textContent = 'Download the installer and run Setup. The standalone app and VST3 are included.';
-    byId('installer-size').textContent = `${(release.installer.size / 1024 / 1024).toFixed(1)} MB · Windows x64`;
+    byId('installer-size').textContent = `${(release.installer.size / 1000000).toFixed(1)} MB · Windows x64`;
     byId('hero-release-note').textContent = 'Standalone + VST3 · Free to play offline.';
     checksum = release.installer.sha256;
     byId('installer-sha').textContent = checksum;
     byId('copy-sha').disabled = false;
+    for (const prefix of ['hero', 'download']) {
+      byId(`${prefix}-checksum-short`).textContent = `${checksum.slice(0, 12)}…`;
+      byId(`${prefix}-checksum-badge`).setAttribute('title', 'Published GitHub SHA-256; compare after downloading.');
+      byId(`${prefix}-checksum-badge`).hidden = false;
+    }
   } catch {
     clearDownloads();
     byId('release-channel').textContent = 'CHECK UNAVAILABLE';
