@@ -1,6 +1,6 @@
 # Cassian — Min10 Studios
 
-Public website: https://crazalothai.github.io/cassian-website/
+Public website: https://min10studios.github.io/cassian-website/
 
 Cassian 8.0 Public Beta is free for Windows x64, standalone and VST3. The site presents the
 Golden 11 amplifier collection, 14 stompboxes, unified Band screen and calibrated tuner.
@@ -12,7 +12,7 @@ at /cassian-website/ with .nojekyll. Installer, portable build, matching AGPL so
 reports and checksums are separate attachments on the official v8.0.0 public-beta release.
 Both download buttons enable only after the exact version and complete metadata validate.
 
-The publication passed 52 website tests and responsive checks on four pages at seven viewport
+The publication passed 53 website tests and responsive checks on four pages at seven viewport
 sizes. Viper's complete control faceplate, the illustrated Band console, eleven Sonic DNA
 references and the owner-provided trademark disclaimer are included. The four retired heads
 and replaced Band photo are excluded from this publication.
