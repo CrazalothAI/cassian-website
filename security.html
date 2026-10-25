@@ -1,1 +1,100 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="Crazaloth"><meta name="publisher" content="Min10Tech LLC"><meta name="brand" content="Min10 Studios"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>Security & downloads — Cassian</title><link rel="icon" href="/cassian-website/assets/cassian-logo-192.png"><link rel="stylesheet" href="/cassian-website/styles.css"></head><body><header class="site-header"><a class="brand" href="/cassian-website/">CASSIAN<small>BY MIN10 STUDIOS</small></a><a class="text-link" href="/cassian-website/">Back to the studio →</a></header><main class="legal-page section-shell"><p class="eyebrow">SECURITY & DOWNLOADS</p><h1>A clear boundary.<br><em>A traceable build.</em></h1><h2>The site is separate from the app</h2><p>The website has no native bridge, localhost connection, custom app URL handler, remote-control endpoint or automatic updater. Cassian does not receive website text, suggestions, release JSON or downloaded web scripts through this site. You choose to download and install an executable separately in Windows.</p><h2>Where the installer comes from</h2><p>The download page queries the public release metadata for <a href="https://github.com/CrazalothAI/cassian-website/releases" rel="noopener noreferrer">CrazalothAI/cassian-website</a>. The download button selects the founder-approved v8.0.0 public beta. It requires that exact prerelease tag, exactly seven files, and the pinned installer SHA-256 and size. Drafts, unrelated previews, changed bytes and unapproved release classifications are rejected. It checks the repository URL, release identity, uploaded file state, file names, version agreement, size limits and GitHub-provided SHA256 digests before enabling links. Missing, ambiguous, oversized or unexpected metadata leaves the buttons disabled.</p><p>Installer files are delivered by GitHub’s release infrastructure. The website does not accept arbitrary download destinations or uploads, and does not execute the installer. Matching source, SHA256SUMS.txt, MD5SUMS.txt and acceptance reports accompany the release. Both checksum manifests cover the final installer, portable ZIP and matching source ZIP. MD5 is for legacy comparisons only; use SHA-256 for integrity checking.</p><h2>What checksums do and do not prove</h2><p>A checksum identifies exact bytes and can detect a changed download when compared with a trusted reference. It is not a publisher signature or a guarantee that software is safe. The 8.0.0 public beta is unsigned at the owner's direction; trusted Windows publisher signing remains pending. Its release report retains uncompleted manual acceptance checks explicitly.</p><p>Full releases use versioned tags and matching source. Account-level immutable-release settings and protected publisher access still require their own verification; they are not advertised as already enabled.</p><h2>Website protections</h2><p>The public GitHub Pages site uses local scripts and artwork, a restrictive HTML content policy, bounded release responses and fixed external destinations. GitHub Pages does not apply the custom HTTP headers used in local preview; those permission/framing headers are not claimed as deployed protection. The site code never calls device APIs. It has no visitor upload service, authentication database, payment form or secrets embedded in browser code. These choices reduce exposure; they do not constitute a guarantee against every browser, hosting or supply-chain vulnerability.</p><h2>Reporting a concern</h2><p>For a non-sensitive issue, use the <a href="https://github.com/CrazalothAI/cassian-website/issues" rel="noopener noreferrer">project issue tracker</a>. Do not post secrets or exploitable private details publicly. A dedicated private vulnerability-reporting channel still needs to be established before public launch.</p></main><footer class="site-footer"><div class="footer-brand"><strong>CASSIAN</strong><p>Min10 Studios · Min10Tech LLC</p><small>Original project provenance · Crazaloth</small></div><div><a href="/cassian-website/privacy.html">Privacy</a><a href="/cassian-website/">Home</a></div></footer></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Crazaloth">
+  <meta name="publisher" content="Min10Tech LLC">
+  <meta name="brand" content="Min10 Studios">
+  <meta name="theme-color" content="#141513">
+  <meta name="description" content="Official Cassian release files and SHA-256 verification.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Downloads &amp; verification — Cassian</title>
+  <link rel="icon" href="/cassian-website/assets/cassian-logo-192.png">
+  <link rel="stylesheet" href="/cassian-website/styles.css">
+</head>
+<body class="document-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header section-shell">
+  <a class="brand" href="/cassian-website/" aria-label="Cassian by Min10 Studios, home">
+    <img src="/cassian-website/assets/cassian-logo-192.png" width="40" height="40" alt="">
+    <span>CASSIAN<small>MIN10 STUDIOS</small></span>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="/cassian-website/#collection">Amplifiers</a><a href="/cassian-website/#band">The band</a>
+    <a class="nav-download" href="/cassian-website/#download">Get Cassian <span aria-hidden="true">↓</span></a>
+  </nav>
+</header>
+<main id="main" class="document-main section-shell">
+  <header class="document-intro">
+    <p class="eyebrow">DOWNLOADS &amp; VERIFICATION</p>
+    <h1>Know your download.</h1>
+    <p>Where Cassian’s files come from, and how to check them.</p>
+  </header>
+  <div class="document-layout">
+    <aside class="document-summary hardware-panel" aria-label="Release details">
+      <p class="eyebrow">PUBLIC BETA / WINDOWS x64</p>
+      <dl class="spec-table">
+        <div><dt>Release tag</dt><dd>v8.0.0</dd></div>
+        <div><dt>Formats</dt><dd>Standalone + VST3</dd></div>
+        <div><dt>File verification</dt><dd>SHA-256</dd></div>
+        <div><dt>Publisher signing</dt><dd>Pending</dd></div>
+      </dl>
+      <a class="text-link" href="/cassian-website/#download">Go to downloads <span aria-hidden="true">↗</span></a>
+    </aside>
+    <div class="document-copy">
+      <section><h2>The official installer</h2>
+        <p>Downloads come from the public
+          <a href="https://github.com/CrazalothAI/cassian-website/releases" rel="noopener noreferrer">Cassian release repository</a>
+          on GitHub. The home page checks the exact v8.0.0 tag and its file metadata before enabling
+          either download button. That tag may be marked as a public beta; drafts and other versions are rejected.</p>
+        <p>If the release has not been published or its files cannot be verified, the buttons stay
+          disabled. Once the verified files are published, opening the page or choosing “Check again”
+          enables the download without a website update.</p></section>
+      <section><h2>Check the downloaded file</h2>
+        <p>The optional SHA-256 check confirms that the file on your computer matches the
+          published installer. Open PowerShell in your Downloads folder and run:</p>
+        <code class="document-command">Get-FileHash .\Cassian-Setup.exe -Algorithm SHA256</code>
+        <p>Compare the complete result with the installer SHA-256 shown in the download section.
+          Every character should match. Use SHA-256 for integrity checks; the MD5 manifest
+          is included only for legacy comparisons.</p></section>
+      <section><h2>Windows publisher signing</h2>
+        <p>Publisher signing is still pending. A matching checksum identifies the file’s bytes;
+          it does not replace a publisher signature or establish that software is safe.
+          Read the matching release report for its actual acceptance results and any unfinished checks.</p></section>
+      <section><h2>What the website verifies</h2>
+        <p>The download check validates the repository and release URL, version agreement,
+          uploaded file state, file names, size limits and GitHub-reported SHA-256 digests.
+          Missing, duplicate or unexpected metadata leaves the download disabled.</p>
+        <p>The release must include the installer, matching portable and source ZIPs,
+          SHA256SUMS.txt, MD5SUMS.txt, RELEASE-READINESS.json and Cassian-Build.json.
+          The separate legacy stable-release validator continues to reject all prereleases.</p></section>
+      <section><h2>The website and app are separate</h2>
+        <p>The website does not install or run Cassian, control the app, read your sessions,
+          or provide an automatic updater. You choose to download the installer and run it in Windows.</p>
+        <p>The site uses local scripts and artwork, a restrictive content policy, bounded release
+          responses and fixed external destinations. It has no visitor upload service, account
+          database, payment form or embedded credentials.</p></section>
+      <section><h2>Hosting limits</h2>
+        <p>GitHub Pages does not apply the custom HTTP headers used by the local preview.
+          Framing and device-permission headers are not claimed as deployed protections.
+          Account-level release immutability and publisher access controls require separate verification.</p></section>
+      <section><h2>Report a concern</h2>
+        <p>Use the <a href="https://github.com/CrazalothAI/cassian-website/issues" rel="noopener noreferrer">issue tracker</a>
+          for non-sensitive reports. A dedicated private vulnerability-reporting channel is
+          not available yet. Do not post secrets or exploitable private details publicly.</p></section>
+    </div>
+  </div>
+</main>
+<footer class="site-footer section-shell">
+  <div class="footer-top"><a class="brand" href="/cassian-website/"><span>CASSIAN<small>MIN10 STUDIOS</small></span></a>
+    <a class="back-top" href="/cassian-website/">Back to Cassian <span aria-hidden="true">↗</span></a></div>
+  <div class="footer-bottom"><p>© 2026 Min10 Studios · Min10Tech LLC<br>
+    <small>Original project provenance · Crazaloth</small></p>
+    <nav aria-label="Footer navigation"><a href="/cassian-website/privacy.html">Privacy</a><a href="/cassian-website/security.html">Security</a>
+      <a href="https://github.com/CrazalothAI/cassian-website/issues" rel="noopener noreferrer">Support</a></nav>
+  </div>
+<p class="trademark-notice">All third-party amplifier and brand names are trademarks of their respective owners and are in no way affiliated with Min10Tech LLC or Cassian. These names are used solely to describe the historical tonal characteristics studied during development.</p>
+</footer>
+</body>
+</html>

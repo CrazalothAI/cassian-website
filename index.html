@@ -6,88 +6,321 @@
   <meta name="author" content="Crazaloth">
   <meta name="publisher" content="Min10Tech LLC">
   <meta name="brand" content="Min10 Studios">
-  <meta name="theme-color" content="#050505">
-  <meta name="description" content="Cassian by Min10 Studios. Real tube tone, a Virtual Session Band, and an integrated guitar recording studio. Free Core for Windows, standalone and VST3.">
+  <meta name="theme-color" content="#141513">
+  <meta name="description" content="Cassian 8.0: guitar amps, pedals, a built-in drum and bass band, and recording. Free Core for Windows x64. Standalone and VST3.">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; media-src 'self'; connect-src https://api.github.com; object-src 'none'; base-uri 'none'; form-action 'none';">
-  <title>Cassian 8.0 — Brutal precision. For every genre.</title>
+  <title>Cassian 8.0 — Your guitar. A whole band. One place.</title>
   <link rel="icon" href="/cassian-website/assets/cassian-logo-192.png">
   <link rel="stylesheet" href="/cassian-website/styles.css">
-  <link rel="preload" href="/cassian-website/assets/head-metal-1280.3c7e91d7974b.webp" as="image" fetchpriority="high">
-  <link rel="modulepreload" href="/cassian-website/release-policy.js?v=8.0.0">
-  <script type="module" src="/cassian-website/site.js?v=8.0.0"></script>
+  <link rel="preload" href="/cassian-website/assets/v8-amp-viper.5ce28f14a90f.webp" as="image" fetchpriority="high">
+  <link rel="modulepreload" href="/cassian-website/release-policy.js">
+  <script type="module" src="/cassian-website/site.js"></script>
   <script type="module" src="/cassian-website/vault.js"></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
-<div class="announcement"><a href="#download"><strong>🔥 MILESTONE 8.0 LAUNCH</strong><span>100% Free Core Engine for Windows • Zero Subscriptions Required</span><span aria-hidden="true">↗</span></a></div>
-<header class="site-header">
-  <a class="brand" href="#main" aria-label="Cassian by Min10 Studios, home"><img src="/cassian-website/assets/cassian-logo-192.png" alt="" width="44" height="44"><span>CASSIAN<small>MIN10 STUDIOS / EST. 2026</small></span></a>
-  <nav aria-label="Main navigation"><a href="#collection">Amp vault</a><a href="#pedalboard">Pedals</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="nav-download" href="#download">Free download <span aria-hidden="true">↓</span></a></nav>
+<header class="site-header section-shell">
+  <a class="brand" href="#main" aria-label="Cassian by Min10 Studios, home">
+    <img src="/cassian-website/assets/cassian-logo-192.png" alt="" width="40" height="40">
+    <span>CASSIAN<small>MIN10 STUDIOS</small></span>
+  </a>
+  <nav aria-label="Main navigation">
+    <a href="#collection">Amplifiers</a><a href="#band">The band</a><a href="#tuner">Tuner</a>
+    <a class="nav-download" href="#download">Get Cassian <span aria-hidden="true">↓</span></a>
+  </nav>
 </header>
 <main id="main">
-  <section class="hero-cinematic" aria-labelledby="hero-title">
-    <div class="video-background-container" aria-hidden="true"><img class="hero-bg-image" src="/cassian-website/assets/head-metal-1280.3c7e91d7974b.webp" alt="" width="1280" height="426" fetchpriority="high"><div class="tube-glow-effect"></div><div class="video-overlay-scrim"></div></div>
-    <div class="hero-content section-shell">
-      <p class="eyebrow hero-eyebrow"><span class="status-light" aria-hidden="true"></span> FORGED IN HIGH-GAIN • ZERO LATENCY • 100% FREE CORE</p>
-      <h1 id="hero-title">BRUTAL<br>PRECISION.<br><em>FOR EVERY GENRE.</em></h1>
-      <div class="hero-bottom"><div class="hero-copy"><p>Engineered from the ground up to conquer low-tuned djent, searing leads, and crushing rhythms—with the dynamic headroom to master glassy cleans and vintage blues. Plug in, lock into a ruthless session drummer, and dial in real tube tone with zero latency.</p><div class="hero-actions"><a class="button primary" href="#download">Download Free Core (Windows) <span aria-hidden="true">↓</span></a><a class="text-link" href="#collection">Explore Sound Vault <span aria-hidden="true">→</span></a></div><p class="hero-fine">WINDOWS x64 &nbsp; // &nbsp; STANDALONE + VST3 &nbsp; // &nbsp; NO TRIAL EXPIRATION</p></div><div class="hero-spec"><span class="live-label">● ENGINE ONLINE</span><strong>64<span>BIT</span></strong><p>DOUBLE-PRECISION<br>TUBE DYNAMICS</p><a href="#innovations">EXPLORE THE ENGINE <span aria-hidden="true">↓</span></a></div></div>
-      <div class="hero-coordinate" aria-hidden="true">FERRUM / 120W HIGH-GAIN<br>VIRTUAL HARDWARE. PHYSICAL FEEL.</div>
+  <section class="hero section-shell" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="status-light" aria-hidden="true"></span> CASSIAN 8.0 / PUBLIC BETA</p>
+      <h1 id="hero-title">Your guitar.<br>A whole band.<br><em>One place.</em></h1>
+      <p class="hero-description">Find your amp. Bring in drums and bass. Record the take.
+        Everything you need to turn a riff into something you can listen back to.</p>
+      <a id="hero-installer-link" class="button primary" aria-disabled="true" aria-describedby="hero-release-note">Download Cassian 8.0 Public Beta (Windows x64)</a>
+      <p class="hero-fine" id="hero-release-note">Standalone + VST3 · Checking the official 8.0 installer…</p>
+      <a class="text-link" href="#collection">Find your sound <span aria-hidden="true">↘</span></a>
+    </div>
+    <div class="hero-rig">
+      <div class="rig-label"><span>THE CASSIAN AMPLIFIER COLLECTION</span><span>EST. 2026</span></div>
+      <div class="hero-head">
+        <div class="viper-render" role="img" aria-label="Viper amplifier in Lead: full faceplate with Drive, Bass, Mid, Treble, Presence, Tight, Space, Master, Boost, Gate and Deep switches, and illuminated power jewel">
+          <img src="/cassian-website/assets/v8-amp-viper.5ce28f14a90f.webp" width="800" height="352"
+            alt="" fetchpriority="high" decoding="async">
+          <div class="viper-faceplate" aria-hidden="true">
+            <div class="viper-channels"><span><i></i>Clean</span><span><i></i>Crunch</span><span class="selected"><i></i>Lead</span></div>
+            <div class="viper-knobs">
+              <div class="viper-knob position-high"><span>Drive</span>
+                <i class="control-dial"><b></b></i><small>6.5</small></div>
+              <div class="viper-knob position-middle"><span>Bass</span>
+                <i class="control-dial"><b></b></i><small>5.0</small></div>
+              <div class="viper-knob position-low"><span>Mid</span>
+                <i class="control-dial"><b></b></i><small>4.0</small></div>
+              <div class="viper-knob position-high"><span>Treb.</span>
+                <i class="control-dial"><b></b></i><small>6.0</small></div>
+              <div class="viper-knob position-middle"><span>Pres.</span>
+                <i class="control-dial"><b></b></i><small>5.0</small></div>
+              <div class="viper-knob position-low"><span>Tight</span>
+                <i class="control-dial"><b></b></i><small>70 Hz</small></div>
+              <div class="viper-knob position-low"><span>Space</span>
+                <i class="control-dial"><b></b></i><small>12%</small></div>
+              <div class="viper-knob position-middle"><span>Master</span>
+                <i class="control-dial"><b></b></i><small>−12 dB</small></div>
+            </div>
+            <div class="viper-switches"><span>Boost<i class="mini-toggle toggle-up"></i></span>
+              <span>Gate<i class="mini-toggle toggle-up"></i></span><span>Deep<i class="mini-toggle"></i></span>
+              <span class="viper-power"><i class="pilot-jewel"></i>Power</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="rig-caption"><span><strong>Viper / Vyper</strong> / German high gain</span><span class="power-label"><i aria-hidden="true"></i> FLAGSHIP / LEAD</span></div>
+      <div class="rig-signal" aria-label="Guitar signal chain"><span>GUITAR IN</span><b aria-hidden="true">→</b><span>PEDALS</span><b aria-hidden="true">→</b><span>AMP</span><b aria-hidden="true">→</b><span>DUAL CABS</span></div>
     </div>
   </section>
-  <div class="trust-strip" aria-label="Core capabilities"><span>✓ 100% Free Core Engine <small>Zero trial expiration</small></span><span>✓ Standalone (.exe) &amp; VST3 <small>Plugin included</small></span><span>✓ Sub-Sample Latency Calibration <small>Loopback tested</small></span><span>✓ 64-Bit Tube Dynamics <small>Zero digital fizz</small></span></div>
-  <section class="innovations section-shell section-pad" id="innovations" aria-labelledby="innovations-title">
-    <div class="section-heading"><div><p class="eyebrow">THE ENGINE / THREE CORE INNOVATIONS</p><h2 id="innovations-title">FORGED IN METAL.<br><em>BUILT FOR ALL.</em></h2></div><p>High-gain metal is the ultimate stress test of audio software. If an engine can conquer 240 BPM low-tuned drop-A chugs with zero latency and zero digital fizz, it handles glassy jazz cleans, vintage blues, and hard rock with unlimited headroom.</p></div>
-    <div class="innovation-grid">
-      <article><p class="eyebrow"><span>01 / TONE</span> NEURAL TUBE DYNAMICS</p><div class="innovation-visual tone-visual" aria-hidden="true"><span class="tube"></span><span class="tube"></span><span class="tube"></span><span class="tube"></span></div><h3>Real Tube Voltage.<br>Zero Blanket.</h3><p>Powered by ultra-fast neural inference with calibrated dBu interface sensitivity. Your pick attack stays biting, dynamic, and uncolored—delivering the authentic physical feel of a high-gain tube head pushing a 4x12 cab.</p></article>
-      <article><p class="eyebrow"><span>02 / RHYTHM</span> VIRTUAL SESSION BAND</p><div class="innovation-visual"><img class="" src="/cassian-website/assets/v8-studio-session.139921f2735c.webp" width="900" height="563" alt="Acoustic drum kit with twin bass beaters and electric bass" loading="lazy" decoding="async"></div><h3>Stop Click-Programming<br>MIDI Drums.</h3><p>Never spend 3 hours drawing drum hits into a grid with a mouse again. Cassian’s built-in session drummer and bassist lock into your groove dynamically across Rock, Metal, Blues, and Jazz—with Funk, Fusion, and Prog actively expanding.</p></article>
-      <article><p class="eyebrow"><span>03 / TRACKING</span> INTEGRATED MINI-DAW</p><div class="innovation-visual tracking-visual" aria-label="Illustrative multitrack recording waveform"><div><span>REC ●</span><span>32-BIT FLOAT</span></div><i></i><i></i><i></i><small>TAKE 03 / DRY DI PRESERVED</small></div><h3>Multi-Take Recording<br>with Zero Hassle.</h3><p>Capture pristine 32-bit float audio with automatic loop-pass take lanes, in-place live reamping, and clean dry DI stem exports for Pro Tools, Logic, or Reaper.</p></article>
+  <div class="inventory-strip section-shell" aria-label="Included in the free core">
+    <span><strong>11</strong> amp heads</span><span><strong>14</strong> stompboxes</span>
+    <span><strong>15</strong> band genres</span><span><strong>75</strong> backing grooves</span>
+  </div>
+  <section class="workflow section-shell section-pad" aria-labelledby="workflow-title">
+    <div class="section-heading"><p class="eyebrow">LESS SETUP. MORE PLAYING.</p><h2 id="workflow-title">From the first chord<br>to the next take.</h2></div>
+    <ol class="workflow-steps">
+      <li><span class="step-number">01</span><div><h3>Choose a sound.</h3><p>Start with a head and cabinet. Add the pedals you reach for.</p></div></li>
+      <li><span class="step-number">02</span><div><h3>Start the band.</h3><p>Pick a groove, set the tempo, and give your riff some company.</p></div></li>
+      <li><span class="step-number">03</span><div><h3>Keep the take.</h3><p>Record, listen back, and export a demo when the part feels right.</p></div></li>
+    </ol>
+  </section>
+  <section class="band-section section-pad" id="band" aria-labelledby="band-title">
+    <div class="feature-split section-shell">
+      <figure class="band-console hardware-panel" aria-labelledby="band-preview-caption">
+        <div class="panel-header"><span class="eyebrow">BAND / DRUMS + BASS</span><span class="panel-indicator">15 GENRES / 75 GROOVES</span></div>
+        <div class="band-preview">
+          <div class="band-preview-heading"><strong>Build the groove.</strong><span class="band-mode">GROOVE</span></div>
+          <div class="band-chooser"><div><span class="console-label">GENRE</span><span class="console-field">Rock <i aria-hidden="true">⌄</i></span></div>
+            <div><span class="console-label">GROOVE</span><span class="console-field">Straight eighths <i aria-hidden="true">⌄</i></span></div></div>
+          <div class="band-genre-preview" aria-label="Examples from the 15 genres"><span class="active">Rock</span><span>Metalcore</span><span>Blues</span><span>Funk</span><span>Jazz</span><span>+10</span></div>
+          <div class="band-transport-preview"><div class="tempo-readout"><span class="console-label">TEMPO</span><strong>120 <small>BPM</small></strong></div>
+            <span class="band-time-signature">4/4</span><div class="transport-keys" aria-label="Illustrated Play and Stop transport">
+              <span class="transport-play"><i aria-hidden="true">▶</i> Play</span><span class="transport-stop"><i aria-hidden="true">■</i> Stop</span></div></div>
+          <div class="band-sequence" aria-label="Illustrative 16-step rhythm pattern"><span>01</span><i></i><i></i><i></i><i></i><span>02</span><i></i><i></i><i></i><i></i><span>03</span><i></i><i></i><i></i><i></i><span>04</span><i></i><i></i><i></i><i></i></div>
+          <div class="band-channel-strips">
+            <div class="band-channel drums-channel"><div class="channel-strip-title"><strong>Drums</strong><span>KIT</span></div>
+              <div class="channel-strip-body"><div class="channel-fader"><i></i></div><div class="channel-meter" aria-hidden="true"><i></i><i></i></div><span>−6.0 <small>dB</small></span></div>
+              <div class="channel-strip-foot"><span>M</span><span>S</span><small>Acoustic kit</small></div></div>
+            <div class="band-channel bass-channel"><div class="channel-strip-title"><strong>Bass</strong><span>INSTRUMENT</span></div>
+              <div class="channel-strip-body"><div class="channel-fader"><i></i></div><div class="channel-meter" aria-hidden="true"><i></i><i></i></div><span>−9.0 <small>dB</small></span></div>
+              <div class="channel-strip-foot"><span>M</span><span>S</span><small>Electric bass</small></div></div>
+          </div>
+        </div>
+        <figcaption id="band-preview-caption">Unified Band screen · interface illustration. Playback and mixing happen in Cassian.</figcaption>
+      </figure>
+      <div class="feature-copy"><p class="eyebrow">YOUR BACKING BAND, READY TO PLAY</p>
+        <h2 id="band-title">A band that’s<br>already set up.</h2>
+        <p>Drums and bass belong in the same session as your guitar. Cassian’s unified Band screen
+          puts the groove, tempo and backing instruments together, right where you’re working.</p>
+        <p>Choose from 15 curated guitar genres and 75 backing grooves. Rock, metalcore, blues,
+          funk, jazz and more—without drawing MIDI notes or loading another instrument plugin.</p>
+        <a class="text-link" href="#download">Bring your next riff <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
+  </section>
+  <section class="tuner-section section-shell section-pad feature-split" id="tuner" aria-labelledby="tuner-title">
+    <div class="feature-copy"><p class="eyebrow">TUNE. MUTE. PLAY.</p><h2 id="tuner-title">Get in tune.<br>Stay in the session.</h2>
+      <p>A clear horizontal cents meter shows exactly where the note sits, from −50 to +50 cents.
+        Calibrate the reference to 432 Hz, 440 Hz, 442 Hz, or the pitch your session needs.</p>
+      <p>Use Standard, Drop D, DADGAD and open tuning presets. Mute guitar monitoring instantly
+        while you tune, then get straight back to playing.</p>
+    </div>
+    <figure class="tuner-console hardware-panel">
+      <div class="panel-header"><span class="eyebrow">CHROMATIC TUNER</span><span class="panel-indicator">GUITAR MUTED</span></div>
+      <div class="tuner-note"><strong>A<sub>4</sub></strong><span>440.00 <small>Hz</small></span></div>
+      <svg class="cents-meter" viewBox="0 0 600 108" role="img" aria-label="Illustration: A at 440 Hz, centred at zero on a minus 50 to plus 50 cents meter">
+        <path class="meter-rule" d="M25 30H575 M25 18V43 M80 24V38 M135 18V43 M190 24V38 M245 18V43 M300 10V49 M355 18V43 M410 24V38 M465 18V43 M520 24V38 M575 18V43"/cassian-website/>
+        <path class="meter-centre" d="M300 4V58 M291 0L300 9L309 0"/cassian-website/>
+        <text x="25" y="80">−50</text><text x="135" y="80">−30</text><text x="245" y="80">−10</text>
+        <text x="300" y="80">0</text><text x="355" y="80">+10</text><text x="465" y="80">+30</text><text x="575" y="80">+50</text>
+      </svg>
+      <div class="tuner-settings"><span>REFERENCE <b>432 / 440 / 442 Hz</b></span><span>TUNING <b>Drop D · DADGAD · Open G</b></span></div>
+      <figcaption>Interface illustration. Tune your instrument in the Cassian app.</figcaption>
+    </figure>
   </section>
   <section class="collection section-pad" id="collection" aria-labelledby="collection-title"><div class="section-shell">
-    <div class="section-heading"><div><p class="eyebrow">01 / THE AMP VAULT</p><h2 id="collection-title">FIFTEEN HEADS.<br><em>NO WEAK LINKS.</em></h2></div><p>From a surgical wall of high-gain to the edge of a clean note. Explore the hardware behind your next signature sound.</p></div>
-    <div class="vault-toolbar"><div class="filters" role="group" aria-label="Filter amplifier heads"><button type="button" data-filter="all" aria-pressed="true" aria-controls="amp-grid">All Heads</button><button type="button" data-filter="metal" aria-pressed="false" aria-controls="amp-grid">High-Gain &amp; Metal</button><button type="button" data-filter="british" aria-pressed="false" aria-controls="amp-grid">British Crunch</button><button type="button" data-filter="clean" aria-pressed="false" aria-controls="amp-grid">Boutique Clean</button></div><p id="vault-status" class="eyebrow" role="status" aria-live="polite">15 / 15 HEADS · All Heads</p></div>
-    <div class="amp-grid" id="amp-grid"><article class="amp-card" data-category="metal"><div class="amp-card-top"><span>01 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-ferrum.3544987ec29d.webp" width="800" height="352" alt="Ferrum amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">FERRUM</span></div><div class="amp-card-copy"><p class="eyebrow">120W / MODERN HIGH GAIN</p><h3>Ferrum<span aria-hidden="true">↗</span></h3><p>120W High-Gain Monster for modern djent, drop-tunings, and crushing rhythm.</p></div></article>
-<article class="amp-card" data-category="metal"><div class="amp-card-top"><span>02 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-viper.5ce28f14a90f.webp" width="800" height="352" alt="Viper amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">VIPER</span></div><div class="amp-card-copy"><p class="eyebrow">TIGHT / FOCUSED / MODERN</p><h3>Viper<span aria-hidden="true">↗</span></h3><p>Surgical modern metal with biting midrange cut and tight low-end tracking.</p></div></article>
-<article class="amp-card" data-category="metal"><div class="amp-card-top"><span>03 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-bastion.ba7f984a4403.webp" width="800" height="352" alt="Bastion amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">BASTION</span></div><div class="amp-card-copy"><p class="eyebrow">HIGH-GAIN / FORTIFIED</p><h3>Bastion<span aria-hidden="true">↗</span></h3><p>High-gain metal</p></div></article>
-<article class="amp-card" data-category="metal"><div class="amp-card-top"><span>04 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-titan.5591b2dca522.webp" width="800" height="352" alt="Titan amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">TITAN</span></div><div class="amp-card-copy"><p class="eyebrow">HIGH-GAIN / COLOSSAL</p><h3>Titan<span aria-hidden="true">↗</span></h3><p>High-gain metal</p></div></article>
-<article class="amp-card" data-category="metal"><div class="amp-card-top"><span>05 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-obsidian.7bcb096056a2.webp" width="800" height="352" alt="Obsidian amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">OBSIDIAN</span></div><div class="amp-card-copy"><p class="eyebrow">HIGH-GAIN / DARK</p><h3>Obsidian<span aria-hidden="true">↗</span></h3><p>High-gain metal</p></div></article>
-<article class="amp-card" data-category="british"><div class="amp-card-top"><span>06 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-rubicon.a58dc355973b.webp" width="800" height="361" alt="Rubicon amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">RUBICON</span></div><div class="amp-card-copy"><p class="eyebrow">BRITISH / ARENA OVERDRIVE</p><h3>Rubicon<span aria-hidden="true">↗</span></h3><p>Classic British roaring overdrive and 80s arena breakup.</p></div></article>
-<article class="amp-card" data-category="british"><div class="amp-card-top"><span>07 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-viridian.bec272790b16.webp" width="800" height="352" alt="Viridian amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">VIRIDIAN</span></div><div class="amp-card-copy"><p class="eyebrow">BRITISH / CRUNCH</p><h3>Viridian<span aria-hidden="true">↗</span></h3><p>British crunch</p></div></article>
-<article class="amp-card" data-category="british"><div class="amp-card-top"><span>08 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-meridian.dcaeb630bbc6.webp" width="800" height="352" alt="Meridian amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">MERIDIAN</span></div><div class="amp-card-copy"><p class="eyebrow">BRITISH / CRUNCH</p><h3>Meridian<span aria-hidden="true">↗</span></h3><p>British crunch</p></div></article>
-<article class="amp-card" data-category="british"><div class="amp-card-top"><span>09 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-solaris.8fc9220d358f.webp" width="800" height="352" alt="Solaris amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">SOLARIS</span></div><div class="amp-card-copy"><p class="eyebrow">BRITISH / CRUNCH</p><h3>Solaris<span aria-hidden="true">↗</span></h3><p>British crunch</p></div></article>
-<article class="amp-card" data-category="clean"><div class="amp-card-top"><span>10 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-lumen.2a867b68894a.webp" width="800" height="352" alt="Lumen amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">LUMEN</span></div><div class="amp-card-copy"><p class="eyebrow">BOUTIQUE / CALIFORNIAN CLEAN</p><h3>Lumen<span aria-hidden="true">↗</span></h3><p>Glassy boutique Californian clean with lush headroom.</p></div></article>
-<article class="amp-card" data-category="clean"><div class="amp-card-top"><span>11 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-aurelia.b7e4298bf10b.webp" width="800" height="342" alt="Aurelia amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">AURELIA</span></div><div class="amp-card-copy"><p class="eyebrow">BOUTIQUE / CLEAN</p><h3>Aurelia<span aria-hidden="true">↗</span></h3><p>Boutique clean</p></div></article>
-<article class="amp-card" data-category="clean"><div class="amp-card-top"><span>12 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-noctis.8336e45e87ce.webp" width="800" height="352" alt="Noctis amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">NOCTIS</span></div><div class="amp-card-copy"><p class="eyebrow">BOUTIQUE / CLEAN</p><h3>Noctis<span aria-hidden="true">↗</span></h3><p>Boutique clean</p></div></article>
-<article class="amp-card" data-category="clean"><div class="amp-card-top"><span>13 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-argent.db040f0f86b6.webp" width="800" height="352" alt="Argent amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">ARGENT</span></div><div class="amp-card-copy"><p class="eyebrow">BOUTIQUE / CLEAN</p><h3>Argent<span aria-hidden="true">↗</span></h3><p>Boutique clean</p></div></article>
-<article class="amp-card" data-category="clean"><div class="amp-card-top"><span>14 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-albion.f35d40e0ca48.webp" width="800" height="352" alt="Albion amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">ALBION</span></div><div class="amp-card-copy"><p class="eyebrow">BOUTIQUE / CLEAN</p><h3>Albion<span aria-hidden="true">↗</span></h3><p>Boutique clean</p></div></article>
-<article class="amp-card" data-category="clean"><div class="amp-card-top"><span>15 / CASSIAN</span><span class="mini-light" aria-hidden="true"></span></div><div class="amp-card-image"><img class="" src="/cassian-website/assets/v8-amp-solstice.3e5ac7cabd96.webp" width="800" height="352" alt="Solstice amplifier head with illuminated vacuum tubes" loading="lazy" decoding="async"><span class="hardware-name" aria-hidden="true">SOLSTICE</span></div><div class="amp-card-copy"><p class="eyebrow">BOUTIQUE / CLEAN</p><h3>Solstice<span aria-hidden="true">↗</span></h3><p>Boutique clean</p></div></article></div>
-    <div class="section-tail"><span>ORIGINAL CASSIAN AMPLIFIER ARTWORK</span><a href="#pricing">Find your collection <span aria-hidden="true">→</span></a></div>
+    <div class="section-heading heading-split"><div><p class="eyebrow">THE GOLDEN 11</p><h2 id="collection-title">Find the voice<br>for the part.</h2></div>
+      <p>Eleven curated, playable heads. From American high gain and British chime to
+        open cleans, acoustic DI and bass. Pick a voice for the part; build the rest of your rig around it.</p></div>
+    <div class="vault-toolbar"><div class="filters" role="group" aria-label="Filter amplifier heads">
+      <button type="button" data-filter="all" aria-pressed="true" aria-controls="amp-grid">All heads</button>
+      <button type="button" data-filter="gain" aria-pressed="false" aria-controls="amp-grid">High gain</button>
+      <button type="button" data-filter="crunch" aria-pressed="false" aria-controls="amp-grid">Crunch &amp; chime</button>
+      <button type="button" data-filter="clean" aria-pressed="false" aria-controls="amp-grid">Clean &amp; acoustic</button>
+      <button type="button" data-filter="bass" aria-pressed="false" aria-controls="amp-grid">Bass</button>
+    </div><p id="vault-status" role="status" aria-live="polite">11 / 11 HEADS · All heads</p></div>
+    <div class="amp-grid" id="amp-grid">
+      <article class="amp-card" data-category="gain">
+        <div class="amp-card-top"><span>01 / American High-Gain</span></div>
+        <div class="amp-card-image"><img src="/cassian-website/assets/v8-amp-ferrum.3544987ec29d.webp" width="800" height="352" alt="Ferrum amplifier head" loading="lazy" decoding="async"></div>
+        <div class="amp-card-copy"><h3>Ferrum</h3><p>A weighty low end and a firm, percussive attack. Tighten the bass for low-tuned rhythm parts, or open it up for sustained, full-bodied leads.</p>
+          <div class="sonic-dna"><span>Sonic DNA / Inspired by</span><strong>Peavey 5150 / 6505</strong></div></div>
+      </article>
+      <article class="amp-card" data-category="gain">
+        <div class="amp-card-top"><span>02 / German High-Gain &amp; Multi-Channel Lead</span></div>
+        <div class="amp-card-image"><img src="/cassian-website/assets/v8-amp-viper.5ce28f14a90f.webp" width="800" height="352" alt="Viper amplifier head" loading="lazy" decoding="async"></div>
+        <div class="amp-card-copy"><h3>Viper</h3><p>German-inspired gain with a sharp rhythm edge and a full lead voice. Viper uses your selected capture; Vyper offers original native clean, crunch and lead channels.</p>
+          <div class="sonic-dna"><span>Sonic DNA / Inspired by</span><strong>Framus Cobra &amp; multi-channel German lead</strong></div></div>
+      </article>
+      <article class="amp-card" data-category="gain">
+        <div class="amp-card-top"><span>03 / Tight Modern High-Gain</span></div>
+        <div class="amp-card-image"><img src="/cassian-website/assets/v8-amp-bastion.ba7f984a4403.webp" width="800" height="352" alt="Bastion amplifier head" loading="lazy" decoding="async"></div>
+        <div class="amp-card-copy"><h3>Bastion</h3><p>Four drive stages, restrained mids and a fast low-end response. Built for the stop-start attack of palm-muted rhythms, with enough sustain to carry a single-note lead.</p>
+          <div class="sonic-dna"><span>Sonic DNA / Inspired by</span><strong>Mesa/Boogie Dual Rectifier</strong></div></div>
+      </article>
+      <article class="amp-card" data-category="gain">
+        <div class="amp-card-top"><span>04 / Singing Overdrive &amp; Harmonic Sustain</span></div>
+        <div class="amp-card-image"><img src="/cassian-website/assets/v8-amp-solstice.3e5ac7cabd96.webp" width="800" height="352" alt="Solstice amplifier head" loading="lazy" decoding="async"></div>
+        <div class="amp-card-copy"><h3>Solstice</h3><p>A smooth overdrive voice with a soft edge to the attack. Keep the gain modest for touch-sensitive phrases, then push it for a long, singing lead.</p>
+          <div class="sonic-dna"><span>Sonic DNA / Inspired by</span><strong>Soldano SLO-100</strong></div></div>
+      </article>
+      <article class="amp-card" data-category="crunch">
+        <div class="amp-card-top"><span>05 / British Arena Overdrive</span></div>
+        <div class="amp-card-image"><img src="/cassian-website/assets/v8-amp-rubicon.a58dc355973b.webp" width="800" height="361" alt="Rubicon amplifier head" loading="lazy" decoding="async"></div>
+        <div class="amp-card-copy"><h3>Rubicon</h3><p>A British-style crunch starting point with grain around the chord and bite in the upper mids. Put a boost in front for an arena-style lead.</p>
+          <div class="sonic-dna"><span>Sonic DNA / Inspired by</span><strong>Marshall JCM800</strong></div></div>
+      </article>
+      <article class="amp-card" data-category="crunch">
+        <div class="amp-card-top"><span>06 / British Class-A Chime</span></div>
+        <div class="amp-card-image"><img src="/cassian-website/assets/v8-amp-viridian.bec272790b16.webp" width="800" height="352" alt="Viridian amplifier head" loading="lazy" decoding="async"></div>
+        <div class="amp-card-copy"><h3>Viridian</h3><p>Bright, Class-A-inspired chime with a lively upper-mid voice. Let open strings ring, dig into a jangling rhythm, or back off for a gentler, bell-like clean.</p>
+          <div class="sonic-dna"><span>Sonic DNA / Inspired by</span><strong>Vox AC30 Top Boost</strong></div></div>
+      </article>
+      <article class="amp-card" data-category="crunch">
+        <div class="amp-card-top"><span>07 / Thick Saturated Crunch</span></div>
+        <div class="amp-card-image"><img src="/cassian-website/assets/v8-amp-solaris.8fc9220d358f.webp" width="800" height="352" alt="Solaris amplifier head" loading="lazy" decoding="async"></div>
+        <div class="amp-card-copy"><h3>Solaris</h3><p>A coarse, broad-shouldered crunch that gets thick as you push it. Leave space between big chords, or add fuzz and a low tuning for a slower, heavier riff.</p>
+          <div class="sonic-dna"><span>Sonic DNA / Inspired by</span><strong>Orange Rockerverb</strong></div></div>
+      </article>
+      <article class="amp-card" data-category="clean">
+        <div class="amp-card-top"><span>08 / Californian Boutique Clean</span></div>
+        <div class="amp-card-image"><img src="/cassian-website/assets/v8-amp-lumen.2a867b68894a.webp" width="800" height="352" alt="Lumen amplifier head" loading="lazy" decoding="async"></div>
+        <div class="amp-card-copy"><h3>Lumen</h3><p>Clear lows and a glassy top with room for your pedalboard. Start here for clean arpeggios, compressed funk, or a spacious foundation for chorus and delay.</p>
+          <div class="sonic-dna"><span>Sonic DNA / Inspired by</span><strong>Fender Twin / Deluxe Reverb</strong></div></div>
+      </article>
+      <article class="amp-card" data-category="clean">
+        <div class="amp-card-top"><span>09 / Studio Clean &amp; Acoustic Resonance</span></div>
+        <div class="amp-card-image"><img src="/cassian-website/assets/v8-amp-aurelia.b7e4298bf10b.webp" width="800" height="342" alt="Aurelia amplifier head" loading="lazy" decoding="async"></div>
+        <div class="amp-card-copy"><h3>Aurelia</h3><p>A direct, unsaturated foundation for acoustic and classical-minded parts. Shape the pickup with EQ and a little room; the natural attack stays at the centre.</p>
+          <div class="sonic-dna"><span>Sonic DNA / Inspired by</span><strong>Roland Jazz Chorus &amp; studio acoustic DI</strong></div></div>
+      </article>
+      <article class="amp-card" data-category="bass">
+        <div class="amp-card-top"><span>10 / Heavy High-Gain &amp; Tube Bass</span></div>
+        <div class="amp-card-image"><img src="/cassian-website/assets/v8-amp-titan.5591b2dca522.webp" width="800" height="352" alt="Titan amplifier head" loading="lazy" decoding="async"></div>
+        <div class="amp-card-copy"><h3>Titan</h3><p>A broad, rounded bass voice with a warm edge when pushed. Give a walking line some body, or add a little hair beneath a heavy rock rhythm.</p>
+          <div class="sonic-dna"><span>Sonic DNA / Inspired by</span><strong>Sunn Model T &amp; Ampeg SVT</strong></div></div>
+      </article>
+      <article class="amp-card" data-category="bass">
+        <div class="amp-card-top"><span>11 / Modern Metal Low-End</span></div>
+        <div class="amp-card-image"><img src="/cassian-website/assets/v8-amp-obsidian.7bcb096056a2.webp" width="800" height="352" alt="Obsidian amplifier head" loading="lazy" decoding="async"></div>
+        <div class="amp-card-copy"><h3>Obsidian</h3><p>A more assertive bass voice for dense guitars: firm lows, audible string attack and a driven edge. Dial in clean definition or bring the clank forward.</p>
+          <div class="sonic-dna"><span>Sonic DNA / Inspired by</span><strong>Darkglass &amp; high-gain bass rigs</strong></div></div>
+      </article>
+    </div>
+    <p class="collection-note">Sonic DNA describes the tonal references studied during sound design. The app identifies the actual engine or capture behind your sound; Vyper is the native voice in the Viper family.</p>
   </div></section>
-  <section class="cab-stage section-shell section-pad" id="cabinets" aria-labelledby="cab-title"><div class="cab-visual"><div class="stage-grid" aria-hidden="true"></div><div class="cab cab-left"><img class="" src="/cassian-website/assets/v8-cab-4x12-ferrum.3faf846777ac.webp" width="560" height="420" alt="Ferrum 4x12 speaker cabinet" loading="lazy" decoding="async"><span>CAB A / FERRUM 4×12</span></div><div class="cab cab-right"><img class="" src="/cassian-website/assets/v8-cab-2x12-lumen.cf368a86b5cf.webp" width="560" height="420" alt="Lumen 2x12 speaker cabinet" loading="lazy" decoding="async"><span>CAB B / LUMEN 2×12</span></div><img class="stage-mic dynamic" src="/cassian-website/assets/v8-mic-dynamic-57.5727f4d2eb87.webp" width="180" height="270" alt="Dynamic 57 studio microphone" loading="lazy" decoding="async"><img class="stage-mic ribbon" src="/cassian-website/assets/v8-mic-ribbon-121.6716f044f11a.webp" width="180" height="270" alt="Ribbon 121 studio microphone" loading="lazy" decoding="async"><div class="phase-badge"><span class="mini-light" aria-hidden="true"></span> PHASE ALIGNED / SUB-SAMPLE</div></div><div class="cab-copy"><p class="eyebrow">02 / DUAL-CAB &amp; PHASE ALIGNMENT</p><h2 id="cab-title">MASSIVE STEREO CABS.<br><em>ZERO COMB-FILTERING.</em></h2><p>Blend two iconic cabinets with real studio microphones. Our automated phase-alignment engine eliminates phase cancellation with sub-sample cross-correlation, giving you a massive, punchy wall of sound.</p><div class="signal-line"><span>DUAL CAB</span><b>→</b><span>DYNAMIC 57 + RIBBON 121</span><b>→</b><span class="accent">IN PHASE</span></div></div></section>
-  <section class="pedalboard section-pad" id="pedalboard" aria-labelledby="pedal-title"><div class="section-shell"><div class="section-heading"><div><p class="eyebrow">03 / THE SIGNAL CHAIN</p><h2 id="pedal-title">FOURTEEN STOMPS.<br><em>ENDLESS INSTINCT.</em></h2></div><p>Grit before the amp. Atmosphere after it. Build your board with metallic stompboxes, from the first boost to the last reverb tail.</p></div><div class="pedal-route"><span>INPUT</span><b>→</b><span>PRE-AMP / DRIVE &amp; DYNAMICS</span><b>→</b><span class="accent">AMP + CAB</span><b>→</b><span>POST-AMP / SPACE &amp; TEXTURE</span><b>→</b><span>OUT</span></div></div><ol class="pedal-track section-shell" tabindex="0" aria-label="14 stompbox pedals; scroll horizontally"><li class="pedal-card"><p class="eyebrow">01 / PRE-AMP</p><img class="" src="/cassian-website/assets/v8-stomp-drive.28e6993290e3.webp" width="240" height="360" alt="Drive v2 metallic stompbox" loading="lazy" decoding="async"><h3>Drive v2</h3></li><li class="pedal-card"><p class="eyebrow">02 / PRE-AMP</p><img class="" src="/cassian-website/assets/v8-stomp-distortion.06a720be84b7.webp" width="240" height="360" alt="Distortion v2 metallic stompbox" loading="lazy" decoding="async"><h3>Distortion v2</h3></li><li class="pedal-card"><p class="eyebrow">03 / PRE-AMP</p><img class="" src="/cassian-website/assets/v8-stomp-wah.1079756e8d36.webp" width="240" height="360" alt="Wah v2 metallic stompbox" loading="lazy" decoding="async"><h3>Wah v2</h3></li><li class="pedal-card"><p class="eyebrow">04 / PRE-AMP</p><img class="" src="/cassian-website/assets/v8-stomp-compressor.f6fef1cc6cbe.webp" width="240" height="360" alt="Compressor v2 metallic stompbox" loading="lazy" decoding="async"><h3>Compressor v2</h3></li><li class="pedal-card"><p class="eyebrow">05 / PRE-AMP</p><img class="" src="/cassian-website/assets/v8-stomp-pitch.25254669d3c2.webp" width="240" height="360" alt="Pitch Shifter v2 metallic stompbox" loading="lazy" decoding="async"><h3>Pitch Shifter v2</h3></li><li class="pedal-card"><p class="eyebrow">06 / PRE-AMP</p><img class="" src="/cassian-website/assets/v8-stomp-harmony.200e521ef36e.webp" width="240" height="160" alt="Intelligent Harmonizer v1 metallic stompbox" loading="lazy" decoding="async"><h3>Intelligent Harmonizer v1</h3></li><li class="pedal-card"><p class="eyebrow">07 / UTILITY EQ</p><img class="" src="/cassian-website/assets/v8-stomp-eq.0e0e1c50d70b.webp" width="240" height="360" alt="EQ v2 metallic stompbox" loading="lazy" decoding="async"><h3>EQ v2</h3></li><li class="pedal-card"><p class="eyebrow">08 / POST-AMP</p><img class="" src="/cassian-website/assets/v8-stomp-chorus.5dca0ff1d21a.webp" width="240" height="360" alt="Chorus v2 metallic stompbox" loading="lazy" decoding="async"><h3>Chorus v2</h3></li><li class="pedal-card"><p class="eyebrow">09 / POST-AMP</p><img class="" src="/cassian-website/assets/v8-stomp-modulation.969a8e79eac5.webp" width="240" height="360" alt="Modulation v2 metallic stompbox" loading="lazy" decoding="async"><h3>Modulation v2</h3></li><li class="pedal-card"><p class="eyebrow">10 / POST-AMP</p><img class="" src="/cassian-website/assets/v8-stomp-delay.5a4def96af60.webp" width="240" height="360" alt="Delay v2 metallic stompbox" loading="lazy" decoding="async"><h3>Delay v2</h3></li><li class="pedal-card"><p class="eyebrow">11 / POST-AMP</p><img class="" src="/cassian-website/assets/v8-stomp-spring.c388a67de834.webp" width="240" height="360" alt="Spring Reverb v2 metallic stompbox" loading="lazy" decoding="async"><h3>Spring Reverb v2</h3></li><li class="pedal-card"><p class="eyebrow">12 / POST-AMP</p><img class="" src="/cassian-website/assets/v8-stomp-plate.29eadf7de826.webp" width="240" height="360" alt="Plate Reverb v2 metallic stompbox" loading="lazy" decoding="async"><h3>Plate Reverb v2</h3></li><li class="pedal-card"><p class="eyebrow">13 / POST-AMP</p><img class="" src="/cassian-website/assets/v8-stomp-reverb.e64b94770482.webp" width="240" height="360" alt="Reverb v2 metallic stompbox" loading="lazy" decoding="async"><h3>Reverb v2</h3></li><li class="pedal-card"><p class="eyebrow">14 / POST-AMP</p><img class="" src="/cassian-website/assets/v8-stomp-ambience.1815b6941a6c.webp" width="240" height="360" alt="Ambience v2 metallic stompbox" loading="lazy" decoding="async"><h3>Ambience v2</h3></li></ol><div class="section-shell section-tail"><span>14 PEDALS / YOUR SIGNAL, YOUR RULES</span><span>SCROLL TO EXPLORE <span aria-hidden="true">→</span></span></div></section>
-  <section class="packs section-shell section-pad" id="packs" aria-labelledby="packs-title"><div class="section-heading"><div><p class="eyebrow">04 / PRO EXPANSIONS</p><h2 id="packs-title">PICK YOUR ERA.<br><em>OWN YOUR SOUND.</em></h2></div><p>Three focused collections. $25 each. A perpetual license to the tones you choose.</p></div><div class="pack-grid">
-    <article class="pack-card arena"><div class="pack-index"><span>PACK / 01</span><span>PERPETUAL LICENSE</span></div><img class="" src="/cassian-website/assets/v8-amp-rubicon.a58dc355973b.webp" width="800" height="361" alt="Rubicon British amplifier head" loading="lazy" decoding="async"><p class="eyebrow">BIG STAGES. BIGGER LEADS.</p><h3>80s Arena Rock</h3><p>Searing hair-metal leads, British high-gain stacks, dimension chorus, bucket-brigade analog delay.</p><ul><li>4 Flagship Heads</li><li>Dual 4x12 Greenback IRs</li><li>8 Arena Presets</li></ul><div class="pack-price"><strong>$25</strong><span>ONE TIME / OWN FOREVER</span></div><a class="text-link" href="#pricing">Compare licenses <span aria-hidden="true">→</span></a></article>
-    <article class="pack-card modern"><div class="pack-index"><span>PACK / 02</span><span>PERPETUAL LICENSE</span></div><img class="" src="/cassian-website/assets/v8-amp-viper.5ce28f14a90f.webp" width="800" height="352" alt="Viper modern high-gain amplifier head" loading="lazy" decoding="async"><p class="eyebrow">LOW TUNINGS. TOTAL CONTROL.</p><h3>Modern High-Gain</h3><p>Surgical low-end tightness for djent, prog, and modern metal. Custom overdrive boost, aggressive noise gate, drop-tuning clarity.</p><ul><li>4 High-Gain Neural Heads</li><li>Oversized V30 Cab IRs</li><li>8 Drop-Tuning Presets</li></ul><div class="pack-price"><strong>$25</strong><span>ONE TIME / OWN FOREVER</span></div><a class="text-link" href="#pricing">Compare licenses <span aria-hidden="true">→</span></a></article>
-    <article class="pack-card vintage"><div class="pack-index"><span>PACK / 03</span><span>PERPETUAL LICENSE</span></div><img class="" src="/cassian-website/assets/v8-amp-lumen.2a867b68894a.webp" width="800" height="352" alt="Lumen boutique clean amplifier head" loading="lazy" decoding="async"><p class="eyebrow">FEEL EVERY EDGE OF BREAKUP.</p><h3>Vintage Boutique</h3><p>American cleans, edge-of-breakup Californian overdrive, optical tremolo, lush spring reverbs.</p><ul><li>4 Hand-Wired Boutique Models</li><li>Open-Back 2x12 IRs</li><li>8 Roots &amp; Blues Presets</li></ul><div class="pack-price"><strong>$25</strong><span>ONE TIME / OWN FOREVER</span></div><a class="text-link" href="#pricing">Compare licenses <span aria-hidden="true">→</span></a></article>
+  <section class="rig-section section-shell section-pad" id="pedalboard" aria-labelledby="rig-title">
+    <div class="section-heading heading-split"><div><p class="eyebrow">BUILD THE REST OF YOUR RIG</p><h2 id="rig-title">The details<br>make the sound.</h2></div><p>Fourteen stompboxes and a dual-cabinet loader.
+      Build a familiar chain, then spend your time playing through it.</p></div>
+    <div class="cabinet-panel hardware-panel"><div class="cabinet-art"><img src="/cassian-website/assets/v8-cab-4x12-ferrum.3faf846777ac.webp" width="560" height="420" alt="Closed-back Ferrum 4x12 cabinet" loading="lazy" decoding="async"><img src="/cassian-website/assets/v8-cab-2x12-lumen.cf368a86b5cf.webp" width="560" height="420" alt="Lumen 2x12 cabinet" loading="lazy" decoding="async"></div>
+      <div><p class="eyebrow">TWO CABINETS. ONE COHERENT SOUND.</p><h3>Blend the speaker,<br>keep the attack.</h3><p>Load and blend two cabinet IRs with sub-sample phase alignment.
+        Pair the weight of a closed-back cabinet with the openness of a smaller box,
+        or bring your own IRs to the session.</p></div></div>
+    <div class="pedal-heading"><h3>Your pedalboard, included.</h3><span class="eyebrow">14 STOMPBOXES</span></div>
+    <ul class="pedal-strip" aria-label="Included stompboxes">
+<li class="pedal-card"><img src="/cassian-website/assets/v8-stomp-drive.28e6993290e3.webp" width="240" height="360" alt="Overdrive pedal" loading="lazy" decoding="async"><span>Overdrive</span></li>
+<li class="pedal-card"><img src="/cassian-website/assets/v8-stomp-distortion.06a720be84b7.webp" width="240" height="360" alt="Distortion pedal" loading="lazy" decoding="async"><span>Distortion</span></li>
+<li class="pedal-card"><img src="/cassian-website/assets/v8-stomp-compressor.f6fef1cc6cbe.webp" width="240" height="360" alt="Compressor pedal" loading="lazy" decoding="async"><span>Compressor</span></li>
+<li class="pedal-card"><img src="/cassian-website/assets/v8-stomp-eq.0e0e1c50d70b.webp" width="240" height="360" alt="EQ pedal" loading="lazy" decoding="async"><span>EQ</span></li>
+<li class="pedal-card"><img src="/cassian-website/assets/v8-stomp-chorus.5dca0ff1d21a.webp" width="240" height="360" alt="Chorus pedal" loading="lazy" decoding="async"><span>Chorus</span></li>
+<li class="pedal-card"><img src="/cassian-website/assets/v8-stomp-delay.5a4def96af60.webp" width="240" height="360" alt="Delay pedal" loading="lazy" decoding="async"><span>Delay</span></li>
+<li class="pedal-card"><img src="/cassian-website/assets/v8-stomp-spring.c388a67de834.webp" width="240" height="360" alt="Spring pedal" loading="lazy" decoding="async"><span>Spring</span></li>
+<li class="pedal-card"><img src="/cassian-website/assets/v8-stomp-plate.29eadf7de826.webp" width="240" height="360" alt="Plate pedal" loading="lazy" decoding="async"><span>Plate</span></li>
+<li class="pedal-card"><img src="/cassian-website/assets/v8-stomp-reverb.e64b94770482.webp" width="240" height="360" alt="Reverb pedal" loading="lazy" decoding="async"><span>Reverb</span></li>
+<li class="pedal-card"><img src="/cassian-website/assets/v8-stomp-modulation.969a8e79eac5.webp" width="240" height="360" alt="Modulation pedal" loading="lazy" decoding="async"><span>Modulation</span></li>
+<li class="pedal-card"><img src="/cassian-website/assets/v8-stomp-wah.1079756e8d36.webp" width="240" height="360" alt="Wah pedal" loading="lazy" decoding="async"><span>Wah</span></li>
+<li class="pedal-card"><img src="/cassian-website/assets/v8-stomp-pitch.25254669d3c2.webp" width="240" height="360" alt="Pitch pedal" loading="lazy" decoding="async"><span>Pitch</span></li>
+<li class="pedal-card"><img src="/cassian-website/assets/v8-stomp-harmony.200e521ef36e.webp" width="240" height="160" alt="Harmony pedal" loading="lazy" decoding="async"><span>Harmony</span></li>
+<li class="pedal-card"><img src="/cassian-website/assets/v8-stomp-ambience.1815b6941a6c.webp" width="240" height="360" alt="Ambience pedal" loading="lazy" decoding="async"><span>Ambience</span></li>
+    </ul>
+  </section>
+  <section class="engine-section section-pad" id="engine" aria-labelledby="engine-title"><div class="section-shell feature-split">
+    <div class="feature-copy"><p class="eyebrow">VOICING v6 / SECOND-ORDER ADAA</p><h2 id="engine-title">Feel the pick.<br>Hear the note.</h2>
+      <p>High gain should respond to your hands. Voicing v6 uses second-order antiderivative
+        anti-aliasing in Ferrum, Bastion and Vyper, with double-precision nonlinear processing
+        to reduce the unwanted high-frequency artifacts that distortion can introduce.</p>
+      <p>The result is a smoother drive response that keeps the shape of your attack.
+        Existing saved rigs retain their chosen sound version.</p></div>
+    <dl class="spec-table"><div><dt>Nonlinear model math</dt><dd>64-bit double precision</dd></div>
+      <div><dt>Current sound version</dt><dd>Voicing v6</dd></div>
+      <div><dt>High-gain anti-aliasing</dt><dd>Second-order ADAA</dd></div>
+      <div><dt>Cabinet path</dt><dd>Dual IR / sub-sample alignment</dd></div>
+      <div><dt>Windows formats</dt><dd>Standalone + VST3</dd></div></dl>
   </div></section>
-  <section class="pricing section-pad" id="pricing" aria-labelledby="pricing-title"><div class="section-shell"><div class="section-heading"><div><p class="eyebrow">05 / NO FINE-PRINT DISTORTION</p><h2 id="pricing-title">YOUR RIG.<br><em>YOUR TERMS.</em></h2></div><p>The Core Engine is free forever. Add a collection you own, or get every current and future model with All-Access.</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="License comparison; scroll horizontally on small screens"><table><caption class="sr-only">Cassian Core Engine, Pro Packs and All-Access license comparison</caption><thead><tr><th scope="col">CHOOSE YOUR HEADROOM</th><th scope="col"><span>CORE ENGINE</span><strong>$0</strong><small>Forever</small></th><th scope="col"><span>PRO PACKS</span><strong>$25</strong><small>Per pack / one time</small></th><th scope="col"><span>ALL-ACCESS PASS</span><strong>$5<span>/ mo</span></strong><small>Cancel anytime</small></th></tr></thead><tbody>
-    <tr><th scope="row">Price</th><td><strong>$0 Forever</strong></td><td><strong>$25 per Pack</strong></td><td><strong>$5 / month</strong></td></tr>
-    <tr><th scope="row">Standalone + VST3 DAW</th><td>Included</td><td>Included</td><td>Included</td></tr>
-    <tr><th scope="row">Virtual Session Band</th><td>Standard Kit &amp; Bass</td><td>Full Grooves &amp; Patterns</td><td>Full Grooves &amp; Patterns</td></tr>
-    <tr><th scope="row">Factory Neural Amps</th><td>4 Starter Models</td><td>4 Curated Pack Models</td><td>ALL Current + Future Models</td></tr>
-    <tr><th scope="row">Cabinet IR Loader &amp; Auto-Align</th><td>Included</td><td>Included</td><td>Included</td></tr>
-    <tr><th scope="row">Cloud Preset Sync</th><td>—</td><td>—</td><td>Included</td></tr>
-    <tr><th scope="row">License Type</th><td>Lifetime Free</td><td>Perpetual (Own Forever)</td><td>Cancel Anytime</td></tr>
-  </tbody><tfoot><tr><td>START WITH YOUR GUITAR.</td><td><a class="button primary" href="#download">Get Free Core ↓</a></td><td><span class="availability">Pro Pack sales coming soon</span></td><td><span class="availability">All-Access coming soon</span></td></tr></tfoot></table></div><p class="pricing-note">Pro Packs and All-Access pricing describes the 8.0 lineup. Purchasing and Cloud Preset Sync are not yet available on this website. The Core Engine requires no subscription.</p></div></section>
-  <section class="faq-section section-shell section-pad" id="faq" aria-labelledby="faq-title"><div><p class="eyebrow">06 / BEFORE YOU PLUG IN</p><h2 id="faq-title">LESS SETUP.<br><em>MORE PLAYING.</em></h2><p>Bedroom. Rehearsal room. Main stage.<br>Bring your guitar. We’ll bring the band.</p></div><div class="faq-list">
-    <details class="faq"><summary>Do I need an expensive audio interface?</summary><p>No. Cassian runs on any standard USB guitar interface (Focusrite Scarlett, AudioBox USB, Volt, Behringer, M-Audio).</p></details>
-    <details class="faq"><summary>Does it run standalone, or do I need another DAW like Reaper or Ableton?</summary><p>Both! You can launch Cassian directly from your desktop as a standalone app to jam in 3 seconds, or load it as a VST3 plugin inside any major DAW.</p></details>
-    <details class="faq"><summary>Does it require an active internet connection to play?</summary><p>Never. All audio processing, neural models, and licensing run 100% offline. Take it on stage or into a cabin without Wi-Fi.</p></details>
-    <details class="faq"><summary>Is the drummer really free?</summary><p>Yes. The Free Core includes the dynamic virtual session drummer and bassist so you never have to play to a boring metronome click again.</p></details>
+  <section class="free-section section-shell section-pad" id="free-core" aria-labelledby="free-title">
+    <p class="eyebrow">NO PLAN TO CHOOSE</p><h2 id="free-title">100% Free Core Engine.</h2>
+    <p class="free-promise">Standalone + VST3. Zero Subscriptions, Zero Paywalls.</p>
+    <p>Amps, pedals, the backing band and recording. Install it, plug in, and play offline.</p>
+    <a class="text-link" href="#download">Get Cassian for free <span aria-hidden="true">↓</span></a>
+  </section>
+  <section class="download section-pad" id="download" aria-labelledby="download-title"><div class="section-shell feature-split">
+    <div class="feature-copy"><p class="eyebrow">CASSIAN 8.0 / WINDOWS x64</p><h2 id="download-title">Make room<br>for the next riff.</h2>
+      <p>The public beta includes the standalone app and VST3 plugin. Use an audio interface
+        for your guitar, and your interface’s ASIO driver for low-latency playing.</p>
+      <p class="download-fine">100% free Core Engine. No subscription or account required to play.</p>
+      <a class="text-link" href="https://github.com/CrazalothAI/cassian-website/releases" rel="noopener noreferrer">Published releases <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="download-box hardware-panel"><div class="panel-header"><span class="eyebrow">OFFICIAL DOWNLOAD</span><span class="pill" id="release-channel">CHECKING 8.0</span></div>
+      <h3 id="release-title">Cassian 8.0 Public Beta</h3>
+      <p id="release-message" role="status" aria-live="polite">Checking the official 8.0 release and its files…</p>
+      <a id="installer-link" class="button primary download-button" aria-disabled="true">Download Cassian 8.0 Public Beta (Windows x64)</a>
+      <div class="download-meta"><span id="installer-size">Standalone + VST3 · Windows x64</span><button class="quiet-button" id="refresh-release" type="button">Check again</button></div>
+      <div class="download-alternatives"><a id="portable-link" aria-disabled="true">Portable ZIP</a><a id="source-link" aria-disabled="true">Matching source</a></div>
+      <details class="verification"><summary>Check your download with SHA-256</summary>
+        <p>Optional: this check confirms that your downloaded file matches the published installer.</p>
+        <ol><li>Open PowerShell in your Downloads folder.</li><li>Run the command below.</li><li>Compare the full result with the published SHA-256. They should match exactly.</li></ol>
+        <code class="verify-command">Get-FileHash .\Cassian-Setup.exe -Algorithm SHA256</code>
+        <label for="installer-sha">Published installer SHA-256</label><code id="installer-sha">Not yet available</code>
+        <div class="checksum-actions"><button class="quiet-button" id="copy-sha" type="button" disabled>Copy SHA-256</button><span id="copy-status" role="status" aria-live="polite"></span></div>
+        <p class="signing-note">Windows publisher signing is still pending. A matching hash checks the file’s bytes; it does not replace a publisher signature.</p>
+        <div class="download-alternatives"><a id="checksums-link" aria-disabled="true">SHA-256 manifest</a><a id="md5-link" aria-disabled="true">MD5 manifest (legacy)</a><a id="readiness-link" aria-disabled="true">Release acceptance report</a></div>
+      </details>
+      <noscript><p>Enable JavaScript to verify the 8.0 download, or <a href="https://github.com/CrazalothAI/cassian-website/releases">browse published releases</a>.</p></noscript>
+    </div>
   </div></section>
-  <section class="download section-shell section-pad" id="download" aria-labelledby="download-title"><div class="download-intro"><p class="eyebrow"><span class="status-light" aria-hidden="true"></span> 07 / MAKE SOME NOISE</p><h2 id="download-title">PLUG IN.<br>LOCK IN.<br><em>LET IT RIP.</em></h2><p>The Free Core Engine for Windows. Standalone and VST3 included. Real tube dynamics. A Built-In Session Drummer &amp; Bassist. Your next great take starts here.</p><a class="text-link" href="https://github.com/CrazalothAI/cassian-website/releases" rel="noopener noreferrer">View all published releases <span aria-hidden="true">↗</span></a><p class="download-fine">Get Cassian for free / Windows x64<br>100% free Core Engine. Official installer availability is verified live below.</p></div><div class="download-box"><div class="download-status"><span class="eyebrow">WINDOWS / x64</span><span class="pill" id="release-channel">CHECKING RELEASE</span></div><h3 id="release-title">Cassian 8.0.0 public beta</h3><p id="release-message" role="status" aria-live="polite">Checking the official release and its download metadata…</p><a id="installer-link" class="button primary download-button" aria-disabled="true">Download free for Windows <span aria-hidden="true">↓</span></a><div class="download-meta"><span id="installer-size">Installer · standalone + optional VST3</span><button class="quiet-button" id="refresh-release" type="button">Check again ↻</button></div><p class="release-note">Cassian 8.0.0 public beta, approved by the founder. This unsigned installer is pinned to its verified SHA-256. Remaining fresh-PC, DAW/MIDI and signing checks are disclosed in the acceptance report.</p><div class="download-alternatives"><a id="portable-link" aria-disabled="true">Portable ZIP ↗</a><a id="source-link" aria-disabled="true">Matching source ↗</a><a id="checksums-link" aria-disabled="true">SHA-256 manifest ↗</a><a id="md5-link" aria-disabled="true">MD5 manifest (legacy) ↗</a></div><details class="verification"><summary>Verify your download & release status</summary><p>Windows publisher signing is still pending. SHA256 detects changed bytes when compared against a trusted reference; it does not replace a publisher signature. MD5 is provided for legacy comparisons only; use SHA-256 for integrity checks.</p><label for="installer-sha">GitHub-reported installer SHA256</label><code id="installer-sha">Not yet available</code><button class="quiet-button" id="copy-sha" type="button" disabled>Copy SHA256</button><span id="copy-status" role="status" aria-live="polite"></span><p>After downloading, run this in PowerShell and compare the complete hash:</p><code>Get-FileHash -Algorithm SHA256 .\Cassian-Setup.exe</code><a id="readiness-link" aria-disabled="true">Read this release’s acceptance report ↗</a></details><noscript><p>JavaScript is needed to check current metadata. <a href="https://github.com/CrazalothAI/cassian-website/releases">Browse the official GitHub releases</a>.</p></noscript></div></section>
-  <section class="feedback section-shell" id="community" aria-labelledby="feedback-title"><div><p class="eyebrow">BUILT IN THE OPEN</p><h2 id="feedback-title">MAKE YOURSELF HEARD.</h2><p>One independent developer. A community of players. Report a bug, share an idea, or help shape the next session.</p><a class="text-link" href="https://github.com/CrazalothAI/cassian-website/issues" rel="noopener noreferrer">GitHub Issues <span aria-hidden="true">↗</span></a><p id="discord-status" class="community-note">Community Discord — invite coming soon.</p></div><details class="feedback-draft"><summary>Prepare a GitHub suggestion <span aria-hidden="true">↗</span></summary><div class="suggestion-box"><p class="eyebrow">WHAT WOULD HELP YOU PLAY?</p><h3>Help make Cassian better.</h3><p>Bugs, playing feedback and useful ideas all help this solo project. Draft a report below, then review and submit it on GitHub. This site does not store or send it automatically.</p><form id="suggestion-form"><label for="suggestion-kind">I’d like to share</label><select id="suggestion-kind"><option value="Feature suggestion">A feature suggestion</option><option value="Bug report">A bug report</option><option value="Playing feedback">Playing feedback</option></select><label for="suggestion-title">A short title</label><input id="suggestion-title" type="text" maxlength="100" required placeholder="What would make your sessions better?"><label for="suggestion-body">Tell us a little more</label><textarea id="suggestion-body" rows="4" maxlength="1800" required placeholder="What happens today, and what would you like instead? Please leave out passwords and personal information."></textarea><button class="button outline" type="submit">Prepare GitHub draft <span aria-hidden="true">↗</span></button></form><p id="suggestion-error" role="alert" hidden>Please enter a title and description, or shorten your draft before opening GitHub.</p><div id="suggestion-result" hidden><p>Your draft is ready. Nothing has been submitted.</p><a class="button primary" id="suggestion-link" rel="noopener noreferrer">Review & submit on GitHub ↗</a></div><p class="suggestion-fine">A GitHub account is required to submit. <a href="https://github.com/CrazalothAI/cassian-website/issues" rel="noopener noreferrer">Browse existing suggestions</a>.</p></div></details></section>
+  <section class="faq-section section-shell section-pad" id="faq" aria-labelledby="faq-title">
+    <div><p class="eyebrow">BEFORE YOU PLUG IN</p><h2 id="faq-title">A few practical things.</h2></div>
+    <div class="faq-list">
+      <details class="faq"><summary>Do I need a DAW?</summary><p>No. Open the standalone app to play and record. Use the VST3 plugin when you want Cassian inside a compatible Windows DAW.</p></details>
+      <details class="faq"><summary>What do I need to connect my guitar?</summary><p>A Windows x64 computer, an audio interface with an instrument input, and headphones or speakers. Use the manufacturer’s ASIO driver when available.</p></details>
+      <details class="faq"><summary>Does Cassian need an internet connection?</summary><p>The core engine runs offline. This website connects to GitHub to verify downloads; playing in Cassian does not require an online session.</p></details>
+      <details class="faq"><summary>Are the drums and bass included?</summary><p>Yes. The free core includes the integrated Band screen, 15 genres and 75 grooves. You do not need a separate MIDI instrument plugin.</p></details>
+      <details class="faq"><summary>Is this a finished release?</summary><p>Cassian 8.0 is a public beta. Keep copies of your sessions and share any reproducible problems through the issue tracker.</p></details>
+    </div>
+  </section>
+  <section class="feedback section-shell" id="community" aria-labelledby="feedback-title">
+    <div><p class="eyebrow">MADE BY MIN10 STUDIOS</p><h2 id="feedback-title">Tell us how it plays.</h2><p>Found a problem or have an idea for your next session? Send the details through GitHub.</p>
+      <a class="text-link" href="https://github.com/CrazalothAI/cassian-website/issues" rel="noopener noreferrer">Open the issue tracker <span aria-hidden="true">↗</span></a></div>
+    <details class="feedback-draft"><summary>Prepare a suggestion</summary><div class="suggestion-box">
+      <p>Write a draft here, then review it on GitHub. Nothing is sent until you submit it there.</p>
+      <form id="suggestion-form"><label for="suggestion-kind">What would you like to share?</label><select id="suggestion-kind"><option value="Feature suggestion">Feature suggestion</option><option value="Bug report">Bug report</option><option value="Playing feedback">Playing feedback</option></select>
+        <label for="suggestion-title">Short title</label><input id="suggestion-title" type="text" maxlength="100" required>
+        <label for="suggestion-body">Details</label><textarea id="suggestion-body" rows="4" maxlength="1800" required></textarea>
+        <button class="button outline" type="submit">Prepare GitHub draft</button></form>
+      <p id="suggestion-error" role="alert" hidden>Enter a title and details within the length limits.</p>
+      <div id="suggestion-result" hidden><p>Your draft is ready. Nothing has been submitted.</p><a class="button primary" id="suggestion-link" rel="noopener noreferrer">Review &amp; submit on GitHub</a></div>
+      <p class="suggestion-fine">A GitHub account is required to submit. Leave out private information.</p>
+    </div></details>
+  </section>
 </main>
-<footer class="site-footer section-shell"><div class="footer-top"><a class="brand" href="#main"><img src="/cassian-website/assets/cassian-logo-192.png" alt="" width="44" height="44"><span>CASSIAN<small>MIN10 STUDIOS • MIN10TECH LLC</small></span></a><span class="footer-statement">FORGED IN METAL. BUILT FOR ALL.</span><a class="back-top" href="#main">BACK TO TOP ↑</a></div><div class="footer-bottom"><p>Built with C++20 and modern real-time DSP. Tested across 400,000+ lines of code and contract suites.<br>© 2026 Min10Tech LLC. <span>Min10 Studios · Min10Tech LLC</span><br><small>Original project provenance · Crazaloth</small></p><nav aria-label="Footer navigation"><a href="/cassian-website/privacy.html">Privacy</a><a href="/cassian-website/security.html">Security</a><a href="https://github.com/CrazalothAI/cassian-website/blob/main/LICENSE.txt" rel="noopener noreferrer">AGPL Source License ↗</a><a href="https://github.com/CrazalothAI/cassian-website/issues" rel="noopener noreferrer">GitHub Issues ↗</a><a href="#discord-status">Community Discord</a></nav></div></footer>
+<footer class="site-footer section-shell"><div class="footer-top"><a class="brand" href="#main"><span>CASSIAN<small>MIN10 STUDIOS</small></span></a><a class="back-top" href="#main">Back to top ↑</a></div>
+  <div class="footer-bottom"><p>© 2026 Min10 Studios · Min10Tech LLC<br><small>Original project provenance · Crazaloth</small></p>
+    <nav aria-label="Footer navigation"><a href="/cassian-website/privacy.html">Privacy</a><a href="/cassian-website/security.html">Security</a><a href="https://github.com/CrazalothAI/cassian-website/blob/main/LICENSE.txt" rel="noopener noreferrer">AGPL source license</a><a href="https://github.com/CrazalothAI/cassian-website/issues" rel="noopener noreferrer">Support</a></nav></div>
+<p class="trademark-notice">All third-party amplifier and brand names are trademarks of their respective owners and are in no way affiliated with Min10Tech LLC or Cassian. These names are used solely to describe the historical tonal characteristics studied during development.</p>
+</footer>
 </body>
 </html>

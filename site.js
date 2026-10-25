@@ -1,15 +1,106 @@
-import {RELEASE_API,validateSelectedRelease,readBoundedJson,suggestionURL} from './release-policy.js?v=8.0.0';
-import {initializeGallery} from './amp-gallery.js';
-const byId=id=>document.getElementById(id);
-const voices={metal:{name:'Ferrum',finish:'GRAPHITE / STEEL',heading:'Weight. Definition. Sustain.',description:'A home for tight rhythms and expressive leads. Shape the low end, choose your drive and keep the notes in focus.',number:'01'},clean:{name:'Lumen',finish:'PEARL IVORY / TEAL / NICKEL',heading:'Let every note breathe.',description:'Expressive cleans, open chords and spacious textures. Start with a clear voice, then add compression, modulation and ambience to taste.',number:'02'},crunch:{name:'Rubicon',finish:'OXBLOOD / BLACKENED BRASS',heading:'Edge, warmth and attitude.',description:'Breakup and classic-rock starting points. Explore responsive drive, cabinet choices and EQ without losing your own playing character.',number:'03'},classical:{name:'Aurelia',finish:'FIGURED WALNUT / BRONZE',heading:'Natural detail. Room to move.',description:'Natural DI and classical-minded starting rigs. Preserve articulation and shape space gently. A guitar capture cannot turn every instrument into a nylon-string guitar.',number:'04'}};
-const tabs=[...document.querySelectorAll('[data-voice]')];
-initializeGallery({tabs,panel:byId('voice-panel'),art:byId('voice-art'),status:byId('artwork-status'),setDetails(id){const v=voices[id];for(const [suffix,key]of [['name','name'],['finish','finish'],['heading','heading'],['description','description'],['number','number']])byId(`voice-${suffix}`).textContent=v[key];}});
-const links=['installer','portable','source','checksums','md5','readiness'];let checksum='';let checking=false;
-function clearDownloads(){checksum='';for(const key of links){const a=byId(`${key}-link`);a.removeAttribute('href');a.setAttribute('aria-disabled','true');}byId('copy-sha').disabled=true;byId('installer-sha').textContent='Not yet available';byId('copy-status').textContent='';byId('release-title').textContent='Cassian 8.0.0 public beta';byId('installer-size').textContent='Installer · standalone + optional VST3';}
-async function loadRelease(){if(checking)return;checking=true;clearDownloads();byId('refresh-release').disabled=true;byId('release-channel').textContent='CHECKING RELEASE';byId('release-message').textContent='Checking the official release and its download metadata…';const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),10000);
-  try{const response=await fetch(RELEASE_API,{signal:controller.signal,credentials:'omit',redirect:'error',cache:'no-store',referrerPolicy:'no-referrer',headers:{Accept:'application/vnd.github+json'}});if(response.status===404){byId('release-channel').textContent='COMING SOON';byId('release-message').textContent='The approved public beta is not published yet. Downloads appear after its seven official files are verified.';return;}const release=validateSelectedRelease(await readBoundedJson(response));for(const key of links){const a=byId(`${key}-link`);a.href=release[key].url;a.rel='noopener noreferrer';a.removeAttribute('aria-disabled');}byId('release-title').textContent=`Cassian ${release.version}`;byId('release-channel').textContent=release.channel.toUpperCase();byId('release-message').textContent='Founder-approved public beta. Unsigned Windows installer with standalone and optional VST3. Fresh-PC, DAW/MIDI and other checks remain disclosed in the acceptance report.';byId('installer-size').textContent=`${(release.installer.size/1024/1024).toFixed(1)} MB · Windows x64 installer`;checksum=release.installer.sha256;byId('installer-sha').textContent=checksum;byId('copy-sha').disabled=false;
-  }catch{clearDownloads();byId('release-channel').textContent='CHECK UNAVAILABLE';byId('release-message').textContent='We could not confirm the current release. Download buttons stay disabled. Try again, or inspect the official GitHub releases above.';}finally{clearTimeout(timeout);byId('refresh-release').disabled=false;checking=false;}}
-byId('refresh-release').addEventListener('click',loadRelease);loadRelease();
-byId('copy-sha').addEventListener('click',async()=>{if(!checksum)return;try{await navigator.clipboard.writeText(checksum);byId('copy-status').textContent='Copied.';}catch{byId('copy-status').textContent='Select and copy the hash above.';}});
-byId('suggestion-form').addEventListener('submit',event=>{event.preventDefault();byId('suggestion-error').hidden=true;try{const url=suggestionURL(byId('suggestion-kind').value,byId('suggestion-title').value,byId('suggestion-body').value);byId('suggestion-link').href=url;byId('suggestion-result').hidden=false;byId('suggestion-link').focus();}catch{byId('suggestion-result').hidden=true;byId('suggestion-link').removeAttribute('href');byId('suggestion-error').hidden=false;}});
-for(const id of ['suggestion-kind','suggestion-title','suggestion-body'])byId(id).addEventListener('input',()=>{byId('suggestion-link').removeAttribute('href');byId('suggestion-result').hidden=true;byId('suggestion-error').hidden=true;});
+// Cassian website. Original project provenance: Crazaloth.
+import {PUBLIC_BETA_API, validatePublicBeta, readBoundedJson, suggestionURL} from './release-policy.js';
+
+const byId = id => document.getElementById(id);
+const links = ['installer', 'portable', 'source', 'checksums', 'md5', 'readiness'];
+let checksum = '';
+let checking = false;
+
+function clearDownloads() {
+  checksum = '';
+  for (const id of [...links.map(key => `${key}-link`), 'hero-installer-link']) {
+    const link = byId(id);
+    link.removeAttribute('href');
+    link.setAttribute('aria-disabled', 'true');
+  }
+  byId('copy-sha').disabled = true;
+  byId('installer-sha').textContent = 'Not yet available';
+  byId('copy-status').textContent = '';
+  byId('release-title').textContent = 'Cassian 8.0 Public Beta';
+  byId('installer-size').textContent = 'Standalone + VST3 · Windows x64';
+  byId('hero-release-note').textContent = 'Standalone + VST3 · Checking the official 8.0 installer…';
+}
+
+async function loadRelease() {
+  if (checking) return;
+  checking = true;
+  clearDownloads();
+  byId('refresh-release').disabled = true;
+  byId('release-channel').textContent = 'CHECKING 8.0';
+  byId('release-message').textContent = 'Checking the official 8.0 release and its files…';
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 10000);
+  try {
+    const response = await fetch(PUBLIC_BETA_API, {
+      signal: controller.signal, credentials:'omit', redirect:'error', cache:'no-store',
+      referrerPolicy:'no-referrer', headers: {Accept: 'application/vnd.github+json'}
+    });
+    if (response.status === 404) {
+      byId('release-channel').textContent = 'AWAITING 8.0';
+      byId('release-message').textContent = 'The 8.0 beta installer is not published yet. Check again after publication.';
+      byId('hero-release-note').textContent = 'Standalone + VST3 · The 8.0 installer is awaiting publication.';
+      return;
+    }
+    const release = validatePublicBeta(await readBoundedJson(response));
+    for (const key of links) {
+      const link = byId(`${key}-link`);
+      link.href = release[key].url;
+      link.rel = 'noopener noreferrer';
+      link.removeAttribute('aria-disabled');
+    }
+    const heroLink = byId('hero-installer-link');
+    heroLink.href = release.installer.url;
+    heroLink.rel = 'noopener noreferrer';
+    heroLink.removeAttribute('aria-disabled');
+    byId('release-channel').textContent = 'PUBLIC BETA';
+    byId('release-message').textContent = 'Download the installer and run Setup. The standalone app and VST3 are included.';
+    byId('installer-size').textContent = `${(release.installer.size / 1024 / 1024).toFixed(1)} MB · Windows x64`;
+    byId('hero-release-note').textContent = 'Standalone + VST3 · Free to play offline.';
+    checksum = release.installer.sha256;
+    byId('installer-sha').textContent = checksum;
+    byId('copy-sha').disabled = false;
+  } catch {
+    clearDownloads();
+    byId('release-channel').textContent = 'CHECK UNAVAILABLE';
+    byId('release-message').textContent = 'We could not confirm the 8.0 installer. Check again or browse published releases.';
+    byId('hero-release-note').textContent = 'The 8.0 download could not be verified. Try Check again below.';
+  } finally {
+    clearTimeout(timeout);
+    byId('refresh-release').disabled = false;
+    checking = false;
+  }
+}
+
+byId('refresh-release').addEventListener('click', loadRelease);
+loadRelease();
+byId('copy-sha').addEventListener('click', async () => {
+  if (!checksum) return;
+  try {
+    await navigator.clipboard.writeText(checksum);
+    byId('copy-status').textContent = 'Copied.';
+  } catch {
+    byId('copy-status').textContent = 'Select and copy the hash above.';
+  }
+});
+byId('suggestion-form').addEventListener('submit', event => {
+  event.preventDefault();
+  byId('suggestion-error').hidden = true;
+  try {
+    const url = suggestionURL(byId('suggestion-kind').value, byId('suggestion-title').value,
+      byId('suggestion-body').value);
+    byId('suggestion-link').href = url;
+    byId('suggestion-result').hidden = false;
+    byId('suggestion-link').focus();
+  } catch {
+    byId('suggestion-result').hidden = true;
+    byId('suggestion-link').removeAttribute('href');
+    byId('suggestion-error').hidden = false;
+  }
+});
+for (const id of ['suggestion-kind', 'suggestion-title', 'suggestion-body']) {
+  byId(id).addEventListener('input', () => {
+    byId('suggestion-link').removeAttribute('href');
+    byId('suggestion-result').hidden = true;
+    byId('suggestion-error').hidden = true;
+  });
+}

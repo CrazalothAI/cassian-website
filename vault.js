@@ -1,6 +1,6 @@
 // Cassian hardware showcase. Original project provenance: Crazaloth.
 export function initializeVault({buttons, cards, status}) {
-  const categories = new Set(['all', 'metal', 'british', 'clean']);
+  const categories = new Set(['all', 'gain', 'crunch', 'clean', 'bass']);
   for (const button of buttons) {
     button.addEventListener('click', () => {
       const category = button.dataset.filter;
@@ -11,7 +11,7 @@ export function initializeVault({buttons, cards, status}) {
         if (!card.hidden) visible++;
       }
       for (const candidate of buttons) candidate.setAttribute('aria-pressed', String(candidate === button));
-      status.textContent = `${String(visible).padStart(2, '0')} / 15 HEADS · ${button.textContent.trim()}`;
+      status.textContent = `${String(visible).padStart(2, '0')} / ${cards.length} HEADS · ${button.textContent.trim()}`;
     });
   }
 }
