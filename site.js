@@ -1,5 +1,5 @@
 // Cassian website. Original project provenance: Crazaloth.
-import {PUBLIC_BETA_API, validatePublicBeta, readBoundedJson, suggestionURL} from './release-policy.js';
+import {SELECTED_RELEASE_API, validateSelectedRelease, readBoundedJson, suggestionURL} from './release-policy.js?build=87f30fe3';
 
 const byId = id => document.getElementById(id);
 const links = ['installer', 'portable', 'source', 'checksums', 'md5', 'readiness'];
@@ -18,6 +18,7 @@ function clearDownloads() {
   byId('copy-status').textContent = '';
   byId('release-title').textContent = 'Cassian 8.0 Public Beta';
   byId('installer-size').textContent = 'Standalone + VST3 · Windows x64';
+  byId('installer-build').textContent = 'Build verification pending';
   byId('hero-release-note').textContent = 'Standalone + VST3 · Checking the official 8.0 installer…';
   for (const prefix of ['hero', 'download']) {
     byId(`${prefix}-checksum-badge`).hidden = true;
@@ -35,7 +36,7 @@ async function loadRelease() {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 10000);
   try {
-    const response = await fetch(PUBLIC_BETA_API, {
+    const response = await fetch(SELECTED_RELEASE_API, {
       signal: controller.signal, credentials:'omit', redirect:'error', cache:'no-store',
       referrerPolicy:'no-referrer', headers: {Accept: 'application/vnd.github+json'}
     });
@@ -45,7 +46,7 @@ async function loadRelease() {
       byId('hero-release-note').textContent = 'Standalone + VST3 · The 8.0 installer is awaiting publication.';
       return;
     }
-    const release = validatePublicBeta(await readBoundedJson(response));
+    const release = validateSelectedRelease(await readBoundedJson(response));
     for (const key of links) {
       const link = byId(`${key}-link`);
       link.href = release[key].url;
@@ -58,7 +59,8 @@ async function loadRelease() {
     heroLink.removeAttribute('aria-disabled');
     byId('release-channel').textContent = 'PUBLIC BETA';
     byId('release-message').textContent = 'Download the installer and run Setup. The standalone app and VST3 are included.';
-    byId('installer-size').textContent = `${(release.installer.size / 1000000).toFixed(1)} MB · Windows x64`;
+    byId('installer-size').textContent = `${(release.installer.size / 1000000).toFixed(1)} MB · ${release.installer.size.toLocaleString('en-US')} bytes · Windows x64`;
+    byId('installer-build').textContent = `Build ${release.buildCommit.slice(0, 8)} · unsigned public beta`;
     byId('hero-release-note').textContent = 'Standalone + VST3 · Free to play offline.';
     checksum = release.installer.sha256;
     byId('installer-sha').textContent = checksum;
