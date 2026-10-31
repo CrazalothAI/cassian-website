@@ -1,0 +1,14 @@
+{
+  "pdf-lib": {
+    "version": "1.17.1",
+    "file": "vendor/pdf-lib.0f9a5cad07941f08.min.js",
+    "sha256": "0f9a5cad07941f0826586c94e089d89b918c46e5c17cf2d5a3c6f666e3bc694f",
+    "integrity": "sha384-weMABwrltA6jWR8DDe9Jp5blk+tZQh7ugpCsF3JwSA53WZM9/14PjS5LAJNHNjAI"
+  },
+  "jszip": {
+    "version": "3.10.1",
+    "file": "vendor/jszip.acc7e41455a80765.min.js",
+    "sha256": "acc7e41455a80765b5fd9c7ee1b8078a6d160bbbca455aeae854de65c947d59e",
+    "integrity": "sha384-+mbV2IY1Zk/X1p/nWllGySJSUN8uMs+gUAN10Or95UBH0fpj6GfKgPmgC5EXieXG"
+  }
+}

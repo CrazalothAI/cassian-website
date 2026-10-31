@@ -1,0 +1,47 @@
+Jester's Brutal Pack 1.0 -- cabinet IR source notice
+
+Creator: Bastian Karschewski / JesterDyne
+Source release: Jester's Brutal Pack 1.0
+Official page: https://www.jester-dyne-productions.com/brutal-ir-pack/
+Original archive:
+https://www.jester-dyne-productions.com/content/files/2023/04/JestersBrutalPack_1.0.zip
+Archive SHA-256:
+299dc053f01ebd1e980459adc48f9c6b8a8c7af91917b4f946512eefdbb311ea
+
+License: CC0 1.0 Universal (CC0-1.0)
+The included handbook, page 3, dedicates the work under CC0 (2022).
+Handbook SHA-256:
+265e887fc747a154916bf56408e9c4a371c9d9036aaf1b22997ad4d161cd079e
+Full legal text: licenses/CC0-1.0.txt
+License URI: https://creativecommons.org/publicdomain/zero/1.0/
+
+CC0 permits copying, modification and distribution, including redistribution of
+raw IR WAVs inside commercial software. Cassian retains this source credit
+voluntarily. Cassian's source-code license does not replace the source CC0
+public-domain dedication and fallback license.
+
+Cassian includes eight selected mono 48 kHz / 24-bit PCM WAVs from the pack.
+Each is byte-for-byte identical to its original source WAV and is renamed only:
+
+Patch 1  CookieMonster -> Cassian_BG412S_V30_SM57.wav
+Patch 12 WorldCollider -> Cassian_BG412S_V30_SM57_Alt.wav
+Patch 9  DevilsCunnilingus -> Cassian_BG412S_V30_PDMIC75.wav
+Patch 2  DarthGenocider -> Cassian_BG412S_DV77_SM57.wav
+Patch 3  KittenSlayer -> Cassian_BG412S_Rockdriver_e606.wav
+Patch 6  VerticalLipStabber -> Cassian_BG412S_DV77_V30_DualSM57.wav
+Patch 7  ManslaughterJoe -> Cassian_BG412S_V30_DV77_PDMIC75_SM57.wav
+Patch 8  BigBubba -> Cassian_BG412S_Rockdriver_V30_e606_SM57.wav
+
+The source cabinet is a modified oversized Behringer BG412S. These are not
+Mesa cabinet captures. Mic positions are not published, so Cassian does not
+label these captures as cap-edge, cap or cone positions. Several selections
+are blends authored in the original pack; Cassian creates no additional blend
+and preserves the complete source tails. Source/delivered hashes and frame
+counts are in assets/irs/manifest.json.
+
+Microphone naming follows the handbook's patch table: PDMIC75. The technical
+list instead says PDMIC78. This discrepancy is retained in the provenance;
+Cassian does not independently resolve the microphone's exact model.
+
+Equipment and product names identify the source recordings. Their use does not
+imply endorsement by or affiliation with the manufacturers or the creator.

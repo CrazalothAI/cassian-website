@@ -1,59 +1,76 @@
 {
   "schema": 1,
-  "status": "published",
-  "version": "8.0.0",
-  "tag": "v8.0.0-build.87f30fe3",
-  "buildCommit": "87f30fe356ebf1dd3ba19ae132125ca91739bf0b",
-  "releaseUrl": "https://github.com/Min10Studios/cassian-website/releases/tag/v8.0.0-build.87f30fe3",
-  "unsigned": true,
-  "files": [
+  "status": "published-beta",
+  "version": "1.0.0",
+  "channel": "Beta",
+  "format": "Windows standalone",
+  "sourceCommit": "f6e66d9682c5a185f7471328c82ec1be20138edb",
+  "tag": "v1.0.0",
+  "releaseUrl": "https://github.com/Min10Studios/cassian-website/releases/tag/v1.0.0",
+  "downloadUrl": "https://github.com/Min10Studios/cassian-website/releases/download/v1.0.0/Cassian-Setup.exe",
+  "distribution": {
+    "free": true,
+    "drmFree": true,
+    "subscriptionRequired": false
+  },
+  "heads": [
+    "Ferrum",
+    "Bastion",
+    "Lumen",
+    "Rubicon",
+    "Viridian"
+  ],
+  "artifacts": [
     {
-      "name": "Cassian-8.0.0-Source.zip",
-      "size": 362684525,
-      "sha256": "7afe249cdfece1c8b9261ba419e2baa4a7336e31518abfc1938dc6b3d9af6539"
-    },
-    {
-      "name": "Cassian-8.0.0-Windows.zip",
-      "size": 297762226,
-      "sha256": "c7e7402b1196366052225b7ccbbb96a84831baab19fdf665298e470308a0869e"
-    },
-    {
-      "name": "Cassian-Build.json",
-      "size": 9224,
-      "sha256": "1d3d02a0504e17951dc9d95261cf3db33188d9fd8be395d639de5e3d6af31293"
-    },
-    {
+      "role": "installer",
       "name": "Cassian-Setup.exe",
-      "size": 429138857,
-      "sha256": "7c62ea6702421f797377a5a536f31262d9bd97b84b832ffc85df8285a115546a"
+      "bytes": 352617588,
+      "sha256": "ec1cfbe2bcf7ae913e5ed4d8e862e4de1af31f899c54ce2728c117a9e5d91a29",
+      "url": "https://github.com/Min10Studios/cassian-website/releases/download/v1.0.0/Cassian-Setup.exe"
     },
     {
-      "name": "MD5SUMS.txt",
-      "size": 171,
-      "sha256": "ac401f0548a01f35283afd402fd354bf5e3d7e3019b4ef2e839cee171b451cff"
+      "role": "windows-zip",
+      "name": "Cassian-1.0.0-Windows.zip",
+      "bytes": 403744848,
+      "sha256": "d861b6497ab451d790579ff821b52e019ae22a1f298ae7e87f1d72fef8086962",
+      "url": "https://github.com/Min10Studios/cassian-website/releases/download/v1.0.0/Cassian-1.0.0-Windows.zip"
     },
     {
-      "name": "RELEASE-READINESS.json",
-      "size": 4076,
-      "sha256": "bb3eba1ec6e42fac8b91a1f07b8c98c49bdad27faf2477e68939c12808bc372e"
+      "role": "application-source",
+      "name": "Cassian-1.0.0-Source.zip",
+      "bytes": 425167171,
+      "sha256": "6e0f73652e2eec82fdd4ac269e88bcd060544e6702c85a9c4c0e057d998e4d9c",
+      "url": "https://github.com/Min10Studios/cassian-website/releases/download/v1.0.0/Cassian-1.0.0-Source.zip"
     },
     {
+      "role": "model-source",
+      "name": "Cassian-1.0.0-Model-Source.zip",
+      "bytes": 38923822,
+      "sha256": "b5d29d1c4b24536137e9c50dfe0dcd6d0a853b9b5e287624e4ea2c18c59aea49",
+      "url": "https://github.com/Min10Studios/cassian-website/releases/download/v1.0.0/Cassian-1.0.0-Model-Source.zip"
+    },
+    {
+      "role": "notices",
+      "name": "NOTICES.txt",
+      "bytes": 1143,
+      "sha256": "33ff256cb1e7ee0eabb180f34bdcb813015dc6d4a0a49c3f776d3a274bb17416",
+      "url": "https://github.com/Min10Studios/cassian-website/releases/download/v1.0.0/NOTICES.txt"
+    },
+    {
+      "role": "release-record",
+      "name": "Cassian-1.0.0-Release.json",
+      "bytes": 3578,
+      "sha256": "52845bd29412f968072e35548eb87f67ca66867b95bd66c27066e729601ec463",
+      "url": "https://github.com/Min10Studios/cassian-website/releases/download/v1.0.0/Cassian-1.0.0-Release.json"
+    },
+    {
+      "role": "checksums",
       "name": "SHA256SUMS.txt",
-      "size": 267,
-      "sha256": "a36193be0e9e0267ed126851caa802f8c7ca4794eb91b0b8f3ca4c1a94529816"
+      "bytes": 541,
+      "sha256": "6b7aea0bf355a7fbaf332d7cfb0306a24fb4b3e3c3d1005de31b95b57abd0001",
+      "url": "https://github.com/Min10Studios/cassian-website/releases/download/v1.0.0/SHA256SUMS.txt"
     }
   ],
-  "verification": {
-    "nativeDistinctTargets": 461,
-    "nativeScope": "Prior complete run plus focused rechecks; pinned-native-only",
-    "frontendAssertions": 1670,
-    "frontendReusedUnchanged": true
-  },
-  "qualification": "Unsigned public beta. Fresh-PC, DAW/MIDI, signing and remaining manual acceptance remain incomplete.",
-  "publication": {
-    "releaseId": 423802168,
-    "publishedAt": "2026-10-26T03:10:31Z",
-    "verifiedAssets": 7,
-    "originalV8AssetsPreserved": 7
-  }
+  "sourceNote": "Use the explicit application-source and separate model-source assets. Automatic GitHub source archives contain only this website.",
+  "signed": false
 }

@@ -2,46 +2,34 @@
 
 Production website: https://min10studios.com/
 
-Current download: [Cassian 8.0.0 build 87f30fe3 — unsigned public beta](https://github.com/Min10Studios/cassian-website/releases/tag/v8.0.0-build.87f30fe3).
-The original v8.0.0 release remains unchanged.
+Current download: [Cassian 1.0.0 Beta](https://github.com/Min10Studios/cassian-website/releases/tag/v1.0.0).
+Windows standalone only. Free, DRM-free, no subscriptions. No pledge or signup is required.
 
-The refreshed site showcases Learn and Tone Crafting Academy, an interactive 24-fret
-workstation with twelve learning pathways, tactile pedalboard controls and standalone
-Compact/Standard/1080p Fullscreen modes. The Golden 11 retain 22 signature visual dial
-guides and Sonic DNA badges; the app has 31 quick-audition presets. Website neck, Band,
-tuner and window illustrations do not process guitar audio or control the installed app.
+The illustrated amp selection contains Ferrum, Bastion, Lumen, Rubicon and Viridian,
+with their existing settings and complete rig presets. Inline pedals, Band and Learn
+are described on the website. Hidden unillustrated captures are not advertised as
+selectable heads. No VST3 download or stable qualification is claimed.
 
-Installer: Cassian-Setup.exe, 429,138,857 bytes.
-SHA-256: 7c62ea6702421f797377a5a536f31262d9bd97b84b832ffc85df8285a115546a
-Compiled app source: 87f30fe356ebf1dd3ba19ae132125ca91739bf0b.
+Application source revision: f6e66d9682c5a185f7471328c82ec1be20138edb.
+Complete matching application source is Cassian-1.0.0-Source.zip;
+separate model/IR corresponding source is Cassian-1.0.0-Model-Source.zip. Both are explicit release
+assets at no charge. Automatic GitHub source ZIPs contain only this website.
 
-Both download buttons require the exact new tag and all seven pinned asset sizes/digests.
-The site publishes release-build.json and uses matching cache versions for the current
-stylesheet, script and validator. Failed refreshes clear links and checksum badges.
-Checksums identify bytes; they are not Windows publisher signatures.
+- Cassian-Setup.exe: 352617588 bytes; SHA-256 ec1cfbe2bcf7ae913e5ed4d8e862e4de1af31f899c54ce2728c117a9e5d91a29
+- Cassian-1.0.0-Windows.zip: 403744848 bytes; SHA-256 d861b6497ab451d790579ff821b52e019ae22a1f298ae7e87f1d72fef8086962
+- Cassian-1.0.0-Source.zip: 425167171 bytes; SHA-256 6e0f73652e2eec82fdd4ac269e88bcd060544e6702c85a9c4c0e057d998e4d9c
+- Cassian-1.0.0-Model-Source.zip: 38923822 bytes; SHA-256 b5d29d1c4b24536137e9c50dfe0dcd6d0a853b9b5e287624e4ea2c18c59aea49
+- NOTICES.txt: 1143 bytes; SHA-256 33ff256cb1e7ee0eabb180f34bdcb813015dc6d4a0a49c3f776d3a274bb17416
+- Cassian-1.0.0-Release.json: 3578 bytes; SHA-256 52845bd29412f968072e35548eb87f67ca66867b95bd66c27066e729601ec463
+- SHA256SUMS.txt: 541 bytes; SHA-256 6b7aea0bf355a7fbaf332d7cfb0306a24fb4b3e3c3d1005de31b95b57abd0001
 
-Verification: 71/71 website tests, 27/27 publication/mirror contracts, and a passing
-production build. Edge browser checks cover four pages at nine sizes from 360x800 to
-1920x1080, including 640x900 and 700x800, with no horizontal overflow. Final published
-metadata received 15/15 affected checks. Native app evidence is a combined 461/461
-ledger from prior full-suite results plus focused rechecks; 1,670 unchanged app frontend
-checks are reused. Pinned native evidence is not a new complete product qualification.
-Fresh-PC, real upgrade, physical DAW/MIDI and signing acceptance remain incomplete.
+Read the release readiness record for tested scope and remaining physical audio,
+fresh-PC and signing limits. Checksums identify bytes and are not publisher signatures.
+Historical releases are retained. No private operator or internal policy inventory is
+part of this website. GitHub Pages serves main/root with CNAME min10studios.com and
+.nojekyll. Existing domain, DNS and email configuration are preserved.
 
-Matching AGPL application source is Cassian-8.0.0-Source.zip on that release, alongside
-the installer, portable ZIP, SHA-256/MD5 manifests, build metadata and readiness disclosures.
-Automatic GitHub archives contain only this website. The exact public package contains
-six approved MIT starter captures and separately licensed CC0 cabinet/rhythm assets.
-No private Cobra captures are redistributed.
-
-GitHub Pages serves the root of main with CNAME min10studios.com and .nojekyll. Canonical,
-OpenGraph/Twitter and sitemap URLs use https://min10studios.com/. The existing Cloudflare
-DNS/email configuration is preserved. Official contact: contact@min10studios.com;
-support: support@min10studios.com. No tracking, visitor storage, app bridge or embedded
-social SDKs. App runtime/history, private sounds, recordings and credentials are excluded
-from this static Git tree; executable/package bytes remain Release attachments.
-
+Official contact: contact@min10studios.com; support: support@min10studios.com.
 Company: Min10Tech LLC. Brand: Min10 Studios. Original project provenance: **Crazaloth**.
-Software source is AGPL-3.0-or-later; see LICENSE.txt. Preserve Crazaloth provenance and
-third-party notices. Third-party tonal references do not imply affiliation. Signature
-profiles are suggested visual settings, not native preset downloads or browser audio.
+Application source is AGPL-3.0-or-later. Preserve Crazaloth attribution and all
+third-party notices. Equipment references do not imply affiliation or endorsement.
